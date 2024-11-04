@@ -1,6 +1,9 @@
 # dipl_project
 
 ### Yes/No datasets
-- SuperGLue/BoolIQ
-- BoolIQ
+- SuperGLue/BoolQ (https://arxiv.org/pdf/1905.10044)
+- BoolQ (https://arxiv.org/pdf/1905.00537)
 - 
+### ABCD datasets
+- SuperGLue/MultiRC (https://arxiv.org/pdf/1905.10044)
+- RACE (https://arxiv.org/pdf/1704.04683)
