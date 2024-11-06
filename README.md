@@ -1,9 +1,11 @@
 # dipl_project
 
-### Yes/No datasets
-- SuperGLue/BoolQ (https://arxiv.org/pdf/1905.10044)
-- BoolQ (https://arxiv.org/pdf/1905.00537)
-- 
+### Yes/No dataset
+- BoolQ (https://github.com/google-research-datasets/boolean-questions)
+
 ### Multichoice datasets
-- SuperGLue/MultiRC (https://arxiv.org/pdf/1905.10044)
-- RACE (https://arxiv.org/pdf/1704.04683)
+- SuperGLue/MultiRC (https://cogcomp.seas.upenn.edu/multirc/)
+- RACE (https://huggingface.co/datasets/ehovy/race)
+
+### Missing word dataset
+- SuperGLue/ReCoRD (https://sheng-z.github.io/ReCoRD-explorer/)
