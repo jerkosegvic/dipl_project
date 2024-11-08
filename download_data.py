@@ -1,6 +1,6 @@
 import argparse
 
-def download_all(data_dir: str):
+def download_all(data_dir: str) -> None:
     ## TODO
     pass
 
