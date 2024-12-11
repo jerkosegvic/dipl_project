@@ -4,11 +4,13 @@ import re
 class MultiRC_question:
     def __init__(
         self,
+        passage_id,
         passage_index: int,
         question: str,
         sentences_used: List[int],
-        answers: Dict[Union[str, str | str,bool]]
+        answers: Dict[str, Union[str | bool]]
     ):
+        self.passage_id = passage_id
         self.passage_index = passage_index
         self.question = question
         self.sentences_used = sentences_used
@@ -18,11 +20,11 @@ class MultiRC_question:
 class ReCoRD_question:
     def __init__(
         self,
-        passage_index: int,
         query: str,
-        answer: str,
+        answers: List[str],
+        answers_span: Tuple[int, int]
     ) -> None:
-        self.passage_index = passage_index
         self.query = query
-        self.answer = answer
+        self.answers = answers
+        self.answers_span = answers_span
         self.w_ind = [i for i, j in enumerate(query.split(" ")) if re.search(".*@placeholder.*", j) ][0]

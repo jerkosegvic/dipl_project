@@ -3,6 +3,7 @@ numpy
 transformers
 torchaudio
 pandas
+pyarrow
 torchdata
 lightning
 gdown
