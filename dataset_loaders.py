@@ -65,7 +65,7 @@ def load_race(
     answers = []
     correct_answer_inds = []
     id_ind = {}
-    for (i,(id, article, question, options, answer)) in enumerate(dataset[['id', 'article', 'question', 'options','answer']].values):
+    for (i,(id, article, question, options, answer)) in enumerate(dataset[['example_id', 'article', 'question', 'options','answer']].values):
         if id not in id_ind.keys():
             id_ind[id] = len(passages)
             passages.append(article)

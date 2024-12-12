@@ -16,14 +16,14 @@ class Boolq_dataset(torch.utils.data.Dataset):
         self.answers = answers
         self.encodings = []
         for (p,q,a) in zip(passages, questions, answers):
-            ans_pos, ans_neg = tokenizer("Yes.", return_tensors='pt'), tokenizer("No.", return_tensors='pt')
-            pos, neg = tokenizer(p+q+"? Yes.", return_tensors='pt'), tokenizer(p+q+"? No.", return_tensors='pt')
+            ans_pos, ans_neg = tokenizer("Yes.", return_tensors='pt', add_special_tokens=False), tokenizer("No.", return_tensors='pt', add_special_tokens=False)
+            pos, neg = tokenizer(p+q+"? Yes.", return_tensors='pt', add_special_tokens=False), tokenizer(p+q+"? No.", return_tensors='pt', add_special_tokens=False)
             attn_pos = torch.full(pos["input_ids"][0].shape, 0)
             targets_pos = torch.full(pos["input_ids"][0].shape, -100)
             attn_neg = torch.full(neg["input_ids"][0].shape, 0)
             targets_neg = torch.full(neg["input_ids"][0].shape, -100)
-            answer_len_pos = ans_pos["input_ids"][0].shape[0] - 1
-            answer_len_neg = ans_neg["input_ids"][0].shape[0] - 1
+            answer_len_pos = ans_pos["input_ids"][0].shape[0]
+            answer_len_neg = ans_neg["input_ids"][0].shape[0]
             targets_pos[-answer_len_pos:] = pos["input_ids"][0][-answer_len_pos:]
             targets_neg[-answer_len_neg:] = neg["input_ids"][0][-answer_len_neg:]
             attn_neg[-answer_len_neg:] = 1
@@ -36,10 +36,22 @@ class Boolq_dataset(torch.utils.data.Dataset):
     def __getitem__(
         self, 
         index: int
-    ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+    ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
         '''
         Returns six tensors:
         one with correct answer(True or False) with corresponding attention mask and targets, 
+        the other with incorrect(also True) with corresponding attention mask and targets
+        The first one is correct
+        '''
+        return self.encodings[index]
+    
+    def get_item_eval(
+        self,
+        index: int
+    ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+        '''
+        Returns six tensors:
+        one with correct answer(True or False) with corresponding attention mask and targets,
         the other with incorrect(also True) with corresponding attention mask and targets
         The first one is correct
         '''
@@ -59,8 +71,8 @@ class MultiRC_dataset(torch.utils.data.Dataset):
         for (p, q) in zip(passages, question_answer_objs):
             entry = []
             for (a, c) in zip(q.answers, q.correct):
-                enc = tokenizer(''.join(p) + q.question+"? " + a, return_tensors='pt')
-                ans_len = tokenizer(a, return_tensors='pt')['input_ids'][0].shape[0]
+                enc = tokenizer(''.join(p) + q.question+"? " + a, return_tensors='pt', add_special_tokens=False)
+                ans_len = tokenizer(a, return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
                 attn_mask = torch.full(enc['input_ids'][0].shape, 0)
                 targets = torch.full(enc['input_ids'][0].shape, -100)
                 attn_mask[-ans_len:] = 1
@@ -99,25 +111,66 @@ class RACE_dataset(torch.utils.data.Dataset):
         passage_inds: List[int],
         questions: List[str],
         answers: List[str],
-        correst_answer_ind: List[str]
+        correst_answer_ind: List[str],
+        tokenizer: AutoTokenizer
     ) -> None:
-        pass
+        self.passages = passages
+        self.passage_inds = passage_inds
+        self.questions = questions
+        self.answers = answers
+        self.correct_answer_ind = correst_answer_ind
+        self.encodings = []
+        self.corrects = []
+        for (p_i, q, a, c) in zip(passage_inds, questions, answers, correst_answer_ind):
+            encodings = []
+            p = passages[p_i]
+            for (i, ans) in enumerate(a):
+                enc = tokenizer(p + q, return_tensors='pt', add_special_tokens=False)
+                tmp = []
+                if q.count("_") == 1:
+                    ind = q.index("_")
+                    left_sz = tokenizer(p + q[:ind], return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
+                    right_sz = tokenizer(q[ind+1:], return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
+                    option = tokenizer(p + q.replace("_", " " + ans + " "), add_special_tokens=False, return_tensors='pt')
+                    attention_mask = torch.full(option['input_ids'][0].shape, 0)
+                    attention_mask[left_sz:-right_sz] = 1
+                    targets = torch.full(option['input_ids'][0].shape, -100)
+                    targets[left_sz:-right_sz] = option['input_ids'][0][left_sz:-right_sz]
+                
+                else:                
+                    option = tokenizer(p + q + " " + ans, return_tensors='pt', add_special_tokens=False)
+                    left_sz = tokenizer(p + q, return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
+                    attention_mask = torch.full(option['input_ids'][0].shape, 0)
+                    attention_mask[left_sz:] = 1
+                    targets = torch.full(option['input_ids'][0].shape, -100)
+                    targets[left_sz:] = option['input_ids'][0][left_sz:]
+
+                tmp.append((option['input_ids'], attention_mask, targets))
+                if i == c:
+                    self.corrects.append((option['input_ids'], attention_mask, targets))
+
+            encodings.append((c, tmp))
 
     def __getitem__(
         self, 
         index: int
-    ) -> Tuple[int, 
-               torch.Tensor, torch.Tensor,
-               torch.Tensor, torch.Tensor,
-               torch.Tensor, torch.Tensor,
-               torch.Tensor, torch.Tensor
-            ]:
+    ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]: 
         '''
         Returns index of correct answer and eight tensors,
         for every of four possible answers, 
         one tensor for the option, and other for attention mask
         '''
-        pass
+        return self.corrects[index]
+
+    def get_item_eval(
+        self,
+        index: int
+    ) -> Tuple[int, List[Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]]:
+        '''
+        Returns index of correct answer and list of tuples, where each element is a tuple
+        with three tensors, one for option, one for attention mask and one for targets
+        '''
+        return self.encodings[index]
 
 class ReCoRD_dataset(torch.utils.data.Dataset):
     def __init__(
