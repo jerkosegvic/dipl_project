@@ -183,9 +183,17 @@ class ReCoRD_dataset(torch.utils.data.Dataset):
     def __getitem__(
         self, 
         index: int
-    ) -> Tuple[int, torch.Tensor, torch.Tensor]:
+    ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         '''
-        Returns index of word that needs to be guessed, 
-        tensor for text and tensor for attention mask
+        Returns three tensors, one for text, one for attention mask and one for targets
+        '''
+        pass
+
+    def get_item_eval(
+        self,
+        index: int
+    ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        '''
+        Returns three tensors, one for text, one for attention mask and one for targets
         '''
         pass
