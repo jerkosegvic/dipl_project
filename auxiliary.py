@@ -22,9 +22,11 @@ class ReCoRD_question:
         self,
         query: str,
         answers: List[str],
-        answers_span: Tuple[int, int]
+        answers_span: List[Tuple[int, int]],
+        paragraph_index: int
     ) -> None:
+        self.paragraph_id = paragraph_index
         self.query = query
         self.answers = answers
         self.answers_span = answers_span
-        self.w_ind = [i for i, j in enumerate(query.split(" ")) if re.search(".*@placeholder.*", j) ][0]
+        self.w_ind = re.search("@placeholder", query).span()

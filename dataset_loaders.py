@@ -6,14 +6,26 @@ import json
 import re
 from typing import Type, TypeVar
 from transformers import AutoTokenizer
+import pickle
 
+PROC_DATA_DIR = 'processed_data'
 
 TBQ = TypeVar('TBQ', bound=Boolq_dataset)
 def load_boolq(
         path: str,
         tokenizer: AutoTokenizer,
+        save_name: str = None,
         Dataset_: Type[TBQ] = Boolq_dataset
     ) -> TBQ:
+    if save_name is None:
+        save_name = "boolq-" + path.split('/')[-1].split('.')[0] + '.pkl'
+
+    save_path = os.path.join(PROC_DATA_DIR, save_name)
+
+    if os.path.exists(save_path):
+        with open(save_path, 'rb') as f:
+            return pickle.load(f)
+        
     with open(path) as f:
         raw_dataset = f.readlines()
 
@@ -22,14 +34,29 @@ def load_boolq(
     questions = dataset['question'].tolist()
     answers = dataset['answer'].tolist()
 
-    return Dataset_(passages, questions, answers, tokenizer)
+    ds = Dataset_(passages, questions, answers, tokenizer)
+    with open(save_path, 'wb') as f:
+        pickle.dump(ds, f)
+    
+    return ds
+
 
 TMR = TypeVar('TMR', bound=MultiRC_dataset)
 def load_multirc(
         path: str,
         tokenizer: AutoTokenizer,
+        save_name: str = None,
         Dataset_: Type[TMR] = MultiRC_dataset
     ) -> TMR:
+    if save_name is None:
+        save_name = "multirc-" + path.split('/')[-1].split('.')[0] + '.pkl'
+
+    save_path = os.path.join(PROC_DATA_DIR, save_name)
+
+    if os.path.exists(save_path):
+        with open(save_path, 'rb') as f:
+            return pickle.load(f)
+
     with open(path) as f:
         raw_dataset = json.load(f)
 
@@ -49,14 +76,28 @@ def load_multirc(
         sentences = re.findall(pattern, paragraph['text'])
         paragraphs.append(sentences)
     
-    return Dataset_(paragraphs, questions_list, tokenizer)
+    ds = Dataset_(paragraphs, questions_list, tokenizer)
+    with open(save_path, 'wb') as f:
+        pickle.dump(ds, f)
+
+    return ds
 
 TRA = TypeVar('TRA', bound=RACE_dataset)
 def load_race(
         path: str,
         tokenizer: AutoTokenizer,
+        save_name: str = None,
         Dataset_: Type[TRA] = RACE_dataset
     ) -> TRA:
+    if save_name is None:
+        save_name = "race-" + path.split('/')[-1].split('.')[0] + '.pkl'
+
+    save_path = os.path.join(PROC_DATA_DIR, save_name)
+
+    if os.path.exists(save_path):
+        with open(save_path, 'rb') as f:
+            return pickle.load(f)
+    
     dataset = pd.read_parquet(path)
 
     passages = []
@@ -75,7 +116,7 @@ def load_race(
         answers.append(options)
         correct_answer_inds.append(int(ord(answer) - ord('A')))
     
-    return Dataset_(
+    ds = Dataset_(
         passages,
         passage_inds,
         questions,
@@ -83,26 +124,46 @@ def load_race(
         correct_answer_inds,
         tokenizer
     )
+    with open(save_path, 'wb') as f:
+        pickle.dump(ds, f)
+
+    return ds
 
 TRC = TypeVar('TRC', bound=ReCoRD_dataset)
 def load_record(
         path: str, 
         tokenizer: AutoTokenizer,
+        save_name: str = None,
         Dataset_: Type[TRC] = ReCoRD_dataset
     ) -> TRC:
+    if save_name is None:
+        save_name = "record-" + path.split('/')[-1].split('.')[0] + '.pkl'
+
+    save_path = os.path.join(PROC_DATA_DIR, save_name)
+
+    if os.path.exists(save_path):
+        with open(save_path, 'rb') as f:
+            return pickle.load(f)
+        
     with open(path) as f:
         raw_dataset = json.load(f)
     
     dataset = pd.DataFrame(raw_dataset['data'])
     passages = []
     qs = []
-    for (passage, qas) in zip(dataset['passage'], dataset['qas']):
-        guestion = ReCoRD_question(
-            query=qas['query'],
-            answers=[a['text'] for a in qas['answers']],
-            answers_span=[(a['start'], a['end']) for a in qas['answers']]
-        )
-        qs.append(guestion)
-        passages.append(passage)
-
-    return Dataset_(passages, qs, tokenizer)
+    for (i,(passage, qas)) in enumerate(zip(dataset['passage'], dataset['qas'])):
+        passages.append(passage['text'])
+        for q in qas:
+            question = ReCoRD_question(
+                query=q['query'],
+                answers=[a['text'] for a in q['answers']],
+                answers_span=[(a['start'], a['end']) for a in q['answers']],
+                paragraph_index=i
+            )
+            qs.append(question)
+    
+    ds = Dataset_(passages, qs, tokenizer)
+    with open(save_path, 'wb') as f:
+        pickle.dump(ds, f)
+    
+    return ds

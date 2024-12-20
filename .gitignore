@@ -1,3 +1,5 @@
 *__pycache__*
 /raw_data/*
+/processed_data/*
 credentials.json
+/models/*
