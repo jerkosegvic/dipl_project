@@ -15,7 +15,8 @@ def load_boolq(
         path: str,
         tokenizer: AutoTokenizer,
         save_name: str = None,
-        Dataset_: Type[TBQ] = Boolq_dataset
+        Dataset_: Type[TBQ] = Boolq_dataset,
+        max_length: int = 1024
     ) -> TBQ:
     if save_name is None:
         save_name = "boolq-" + path.split('/')[-1].split('.')[0] + '.pkl'
@@ -34,7 +35,7 @@ def load_boolq(
     questions = dataset['question'].tolist()
     answers = dataset['answer'].tolist()
 
-    ds = Dataset_(passages, questions, answers, tokenizer)
+    ds = Dataset_(passages, questions, answers, tokenizer, max_length)
     with open(save_path, 'wb') as f:
         pickle.dump(ds, f)
     
@@ -46,7 +47,8 @@ def load_multirc(
         path: str,
         tokenizer: AutoTokenizer,
         save_name: str = None,
-        Dataset_: Type[TMR] = MultiRC_dataset
+        Dataset_: Type[TMR] = MultiRC_dataset,
+        max_length: int = 1024
     ) -> TMR:
     if save_name is None:
         save_name = "multirc-" + path.split('/')[-1].split('.')[0] + '.pkl'
@@ -76,7 +78,7 @@ def load_multirc(
         sentences = re.findall(pattern, paragraph['text'])
         paragraphs.append(sentences)
     
-    ds = Dataset_(paragraphs, questions_list, tokenizer)
+    ds = Dataset_(paragraphs, questions_list, tokenizer, max_length)
     with open(save_path, 'wb') as f:
         pickle.dump(ds, f)
 
@@ -87,7 +89,8 @@ def load_race(
         path: str,
         tokenizer: AutoTokenizer,
         save_name: str = None,
-        Dataset_: Type[TRA] = RACE_dataset
+        Dataset_: Type[TRA] = RACE_dataset,
+        max_length: int = 1024
     ) -> TRA:
     if save_name is None:
         save_name = "race-" + path.split('/')[-1].split('.')[0] + '.pkl'
@@ -122,7 +125,8 @@ def load_race(
         questions,
         answers,
         correct_answer_inds,
-        tokenizer
+        tokenizer,
+        max_length=max_length
     )
     with open(save_path, 'wb') as f:
         pickle.dump(ds, f)
@@ -134,7 +138,8 @@ def load_record(
         path: str, 
         tokenizer: AutoTokenizer,
         save_name: str = None,
-        Dataset_: Type[TRC] = ReCoRD_dataset
+        Dataset_: Type[TRC] = ReCoRD_dataset,
+        max_length: int = 1024
     ) -> TRC:
     if save_name is None:
         save_name = "record-" + path.split('/')[-1].split('.')[0] + '.pkl'
@@ -162,7 +167,7 @@ def load_record(
             )
             qs.append(question)
     
-    ds = Dataset_(passages, qs, tokenizer)
+    ds = Dataset_(passages, qs, tokenizer, max_length)
     with open(save_path, 'wb') as f:
         pickle.dump(ds, f)
     
