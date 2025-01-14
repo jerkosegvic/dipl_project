@@ -7,9 +7,9 @@ from evaluators import evaluate_race_example_llm
 import torch
 
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
-LR = 1e-4
+LR = 1e-5
 MODEL_NAME = 'gpt2'
-BATCH_SIZE = 4
+BATCH_SIZE = 3
 EPOCHS = 5
 
 if __name__ == '__main__':
@@ -48,8 +48,11 @@ if __name__ == '__main__':
         device=DEVICE,
         evaluation_interval=1000,
         log_interval=200,
-        eval_func=evaluate_race_example_llm
+        eval_func=evaluate_race_example_llm,
+        train_eval_size=1000
     )
     print("Training finished")
     print("Saving model")
-    torch.save(model.state_dict(), 'models/boolq_model.pth')
+    model.eval()
+    model.to('cpu')
+    torch.save(model.state_dict(), 'models/race_model.pth')

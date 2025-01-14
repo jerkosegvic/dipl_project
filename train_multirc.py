@@ -1,16 +1,20 @@
 from transformers import AutoTokenizer, GPT2LMHeadModel, GPT2Tokenizer
 from models import Model_LLM
 from training import train_LLM, evaluate_LLM
-from datasets import Boolq_dataset
-from dataset_loaders import load_boolq
-from evaluators import evaluate_boolqe_example_llm
+from datasets import MultiRC_dataset
+from dataset_loaders import load_multirc
+from evaluators import evaluate_multirc_example_llm
 import torch
+from functools import partial
 
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
-LR = 1e-4
+LR = 1e-5
 MODEL_NAME = 'gpt2'
 BATCH_SIZE = 3
-EPOCHS = 5
+EPOCHS = 10
+MAIN_THRESHOLD = 0.85
+SCHEDULER = True
+GAMMA = 0.7
 
 if __name__ == '__main__':
     if DEVICE == 'cuda':
@@ -21,24 +25,31 @@ if __name__ == '__main__':
         tokenizer.pad_token = tokenizer.eos_token
         tokenizer.pad_token_id = tokenizer.eos_token_id 
     print("Model initialized")
-    train_dataset = load_boolq(
-        'raw_data/BoolQ/train.jsonl',
+    train_dataset = load_multirc(
+        'raw_data/multirc-v2/splitv2/train_456-fixedIds.json',
         tokenizer,
-        Dataset_=Boolq_dataset,
+        Dataset_=MultiRC_dataset,
         max_length=1024
     )
     print(f"Train dataset loaded, with length {len(train_dataset)}")
-    val_dataset = load_boolq(
-        'raw_data/BoolQ/dev.jsonl',
+    val_dataset = load_multirc(
+        'raw_data/multirc-v2/splitv2/dev_83-fixedIds.json',
         tokenizer,
-        Dataset_=Boolq_dataset,
+        Dataset_=MultiRC_dataset,
         max_length=1024
     )
     print(f"Validation dataset loaded, with length {len(val_dataset)}")
     optimizer = torch.optim.Adam(model.parameters(), lr=LR)
-    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=0.5)
+    
+    if SCHEDULER:
+        scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=1, gamma=GAMMA)
+        print("Scheduler initialized")
+    else:
+        scheduler = None
+
     print("Optimizer initialized")
     print("Starting training")
+    func_ = partial(evaluate_multirc_example_llm, threshold_total=MAIN_THRESHOLD)
     train_LLM(
         model,
         train_dataset,
@@ -49,12 +60,12 @@ if __name__ == '__main__':
         device=DEVICE,
         evaluation_interval=1000,
         log_interval=200,
-        eval_func=evaluate_boolqe_example_llm,
+        eval_func=func_,
         train_eval_size=1000,
-        scheduler=scheduler,
+        scheduler=scheduler
     )
     print("Training finished")
     print("Saving model")
     model.eval()
     model.to('cpu')
-    torch.save(model.state_dict(), 'models/boolq_model.pth')
+    torch.save(model, 'models/multirc_model.pth')

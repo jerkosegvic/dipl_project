@@ -1,0 +1,267 @@
+Model initialized
+Token indices sequence length is longer than the specified maximum sequence length for this model (1035 > 1024). Running this sequence through the model will result in indexing errors
+Train dataset loaded, with length 87719
+Validation dataset loaded, with length 4867
+Optimizer initialized
+Starting training
+Evaluating zero-shot performance...
+    Zero-shot performance: 0.21820423258680913
+Training on 21930 batches
+[EVAL] Timestamp: 03.01.2025 21:47:50, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 0 / 21930, Batch Loss: 4.076638698577881, Eval loss: 3.5789643666150637
+[LOG] Timestamp: 03.01.2025 21:50:48, Epoch: 1 / 5
+    Batch: 200 / 21930, Batch Loss: 3.1977245807647705
+[LOG] Timestamp: 03.01.2025 21:51:48, Epoch: 1 / 5
+    Batch: 400 / 21930, Batch Loss: 2.8253443241119385
+[LOG] Timestamp: 03.01.2025 21:52:48, Epoch: 1 / 5
+    Batch: 600 / 21930, Batch Loss: 2.2164695262908936
+[LOG] Timestamp: 03.01.2025 21:53:48, Epoch: 1 / 5
+    Batch: 800 / 21930, Batch Loss: 2.4266860485076904
+[EVAL] Timestamp: 03.01.2025 21:54:48, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 1000 / 21930, Batch Loss: 4.505985260009766, Eval loss: 2.9396428560368233
+[LOG] Timestamp: 03.01.2025 21:57:47, Epoch: 1 / 5
+    Batch: 1200 / 21930, Batch Loss: 3.1369926929473877
+[LOG] Timestamp: 03.01.2025 21:58:48, Epoch: 1 / 5
+    Batch: 1400 / 21930, Batch Loss: 2.5005149841308594
+[LOG] Timestamp: 03.01.2025 21:59:48, Epoch: 1 / 5
+    Batch: 1600 / 21930, Batch Loss: 2.78245210647583
+[LOG] Timestamp: 03.01.2025 22:00:48, Epoch: 1 / 5
+    Batch: 1800 / 21930, Batch Loss: 3.258894443511963
+[EVAL] Timestamp: 03.01.2025 22:01:48, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 2000 / 21930, Batch Loss: 2.868358850479126, Eval loss: 2.9309267605438327
+[LOG] Timestamp: 03.01.2025 22:04:47, Epoch: 1 / 5
+    Batch: 2200 / 21930, Batch Loss: 2.9461982250213623
+[LOG] Timestamp: 03.01.2025 22:05:48, Epoch: 1 / 5
+    Batch: 2400 / 21930, Batch Loss: 1.6184715032577515
+[LOG] Timestamp: 03.01.2025 22:06:48, Epoch: 1 / 5
+    Batch: 2600 / 21930, Batch Loss: 2.6021010875701904
+[LOG] Timestamp: 03.01.2025 22:07:48, Epoch: 1 / 5
+    Batch: 2800 / 21930, Batch Loss: 3.359590768814087
+[EVAL] Timestamp: 03.01.2025 22:08:48, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 3000 / 21930, Batch Loss: 2.9227542877197266, Eval loss: 2.883993765959117
+[LOG] Timestamp: 03.01.2025 22:11:47, Epoch: 1 / 5
+    Batch: 3200 / 21930, Batch Loss: 3.830409526824951
+[LOG] Timestamp: 03.01.2025 22:12:48, Epoch: 1 / 5
+    Batch: 3400 / 21930, Batch Loss: 3.1726233959198
+[LOG] Timestamp: 03.01.2025 22:13:48, Epoch: 1 / 5
+    Batch: 3600 / 21930, Batch Loss: 2.611549139022827
+[LOG] Timestamp: 03.01.2025 22:14:48, Epoch: 1 / 5
+    Batch: 3800 / 21930, Batch Loss: 2.711853504180908
+[EVAL] Timestamp: 03.01.2025 22:15:48, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 4000 / 21930, Batch Loss: 2.115718126296997, Eval loss: 2.8713207784106523
+[LOG] Timestamp: 03.01.2025 22:18:47, Epoch: 1 / 5
+    Batch: 4200 / 21930, Batch Loss: 2.89001727104187
+[LOG] Timestamp: 03.01.2025 22:19:48, Epoch: 1 / 5
+    Batch: 4400 / 21930, Batch Loss: 3.806577444076538
+[LOG] Timestamp: 03.01.2025 22:20:48, Epoch: 1 / 5
+    Batch: 4600 / 21930, Batch Loss: 2.847578525543213
+[LOG] Timestamp: 03.01.2025 22:21:48, Epoch: 1 / 5
+    Batch: 4800 / 21930, Batch Loss: 2.435871124267578
+[EVAL] Timestamp: 03.01.2025 22:22:48, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 5000 / 21930, Batch Loss: 1.8155604600906372, Eval loss: 2.895433063181875
+[LOG] Timestamp: 03.01.2025 22:25:48, Epoch: 1 / 5
+    Batch: 5200 / 21930, Batch Loss: 2.7086825370788574
+[LOG] Timestamp: 03.01.2025 22:26:48, Epoch: 1 / 5
+    Batch: 5400 / 21930, Batch Loss: 3.422943592071533
+[LOG] Timestamp: 03.01.2025 22:27:48, Epoch: 1 / 5
+    Batch: 5600 / 21930, Batch Loss: 2.2635498046875
+[LOG] Timestamp: 03.01.2025 22:28:48, Epoch: 1 / 5
+    Batch: 5800 / 21930, Batch Loss: 2.807486057281494
+[EVAL] Timestamp: 03.01.2025 22:29:48, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 6000 / 21930, Batch Loss: 3.3448824882507324, Eval loss: 2.872554487004668
+[LOG] Timestamp: 03.01.2025 22:32:48, Epoch: 1 / 5
+    Batch: 6200 / 21930, Batch Loss: 3.7694156169891357
+[LOG] Timestamp: 03.01.2025 22:33:48, Epoch: 1 / 5
+    Batch: 6400 / 21930, Batch Loss: 3.436161994934082
+[LOG] Timestamp: 03.01.2025 22:34:48, Epoch: 1 / 5
+    Batch: 6600 / 21930, Batch Loss: 1.9585399627685547
+[LOG] Timestamp: 03.01.2025 22:35:48, Epoch: 1 / 5
+    Batch: 6800 / 21930, Batch Loss: 3.2497358322143555
+[EVAL] Timestamp: 03.01.2025 22:36:49, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 7000 / 21930, Batch Loss: 4.287415981292725, Eval loss: 2.854016280850134
+[LOG] Timestamp: 03.01.2025 22:39:48, Epoch: 1 / 5
+    Batch: 7200 / 21930, Batch Loss: 3.4895267486572266
+[LOG] Timestamp: 03.01.2025 22:40:48, Epoch: 1 / 5
+    Batch: 7400 / 21930, Batch Loss: 4.435433864593506
+[LOG] Timestamp: 03.01.2025 22:41:48, Epoch: 1 / 5
+    Batch: 7600 / 21930, Batch Loss: 3.2823283672332764
+[LOG] Timestamp: 03.01.2025 22:42:48, Epoch: 1 / 5
+    Batch: 7800 / 21930, Batch Loss: 3.0073516368865967
+[EVAL] Timestamp: 03.01.2025 22:43:49, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 8000 / 21930, Batch Loss: 3.30617094039917, Eval loss: 2.802311051499187
+[LOG] Timestamp: 03.01.2025 22:46:48, Epoch: 1 / 5
+    Batch: 8200 / 21930, Batch Loss: 3.1073105335235596
+[LOG] Timestamp: 03.01.2025 22:47:48, Epoch: 1 / 5
+    Batch: 8400 / 21930, Batch Loss: 2.7385165691375732
+[LOG] Timestamp: 03.01.2025 22:48:48, Epoch: 1 / 5
+    Batch: 8600 / 21930, Batch Loss: 3.7132163047790527
+[LOG] Timestamp: 03.01.2025 22:49:49, Epoch: 1 / 5
+    Batch: 8800 / 21930, Batch Loss: 3.270371675491333
+[EVAL] Timestamp: 03.01.2025 22:50:49, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 9000 / 21930, Batch Loss: 2.8751628398895264, Eval loss: 2.8268733053003654
+[LOG] Timestamp: 03.01.2025 22:53:48, Epoch: 1 / 5
+    Batch: 9200 / 21930, Batch Loss: 3.327449321746826
+[LOG] Timestamp: 03.01.2025 22:54:48, Epoch: 1 / 5
+    Batch: 9400 / 21930, Batch Loss: 2.757401943206787
+[LOG] Timestamp: 03.01.2025 22:55:49, Epoch: 1 / 5
+    Batch: 9600 / 21930, Batch Loss: 3.4708335399627686
+[LOG] Timestamp: 03.01.2025 22:56:49, Epoch: 1 / 5
+    Batch: 9800 / 21930, Batch Loss: 1.2899593114852905
+[EVAL] Timestamp: 03.01.2025 22:57:49, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 10000 / 21930, Batch Loss: 2.895113945007324, Eval loss: 2.829260778799347
+[LOG] Timestamp: 03.01.2025 23:00:48, Epoch: 1 / 5
+    Batch: 10200 / 21930, Batch Loss: 2.75920033454895
+[LOG] Timestamp: 03.01.2025 23:01:49, Epoch: 1 / 5
+    Batch: 10400 / 21930, Batch Loss: 3.1750259399414062
+[LOG] Timestamp: 03.01.2025 23:02:49, Epoch: 1 / 5
+    Batch: 10600 / 21930, Batch Loss: 2.7676074504852295
+[LOG] Timestamp: 03.01.2025 23:03:49, Epoch: 1 / 5
+    Batch: 10800 / 21930, Batch Loss: 3.713017225265503
+[EVAL] Timestamp: 03.01.2025 23:04:49, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 11000 / 21930, Batch Loss: 2.4131832122802734, Eval loss: 2.8403529404810244
+[LOG] Timestamp: 03.01.2025 23:07:48, Epoch: 1 / 5
+    Batch: 11200 / 21930, Batch Loss: 3.5003488063812256
+[LOG] Timestamp: 03.01.2025 23:08:49, Epoch: 1 / 5
+    Batch: 11400 / 21930, Batch Loss: 2.721362829208374
+[LOG] Timestamp: 03.01.2025 23:09:49, Epoch: 1 / 5
+    Batch: 11600 / 21930, Batch Loss: 2.3616089820861816
+[LOG] Timestamp: 03.01.2025 23:10:49, Epoch: 1 / 5
+    Batch: 11800 / 21930, Batch Loss: 3.9334583282470703
+[EVAL] Timestamp: 03.01.2025 23:11:49, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 12000 / 21930, Batch Loss: 2.692211151123047, Eval loss: 2.8000242122882883
+[LOG] Timestamp: 03.01.2025 23:14:49, Epoch: 1 / 5
+    Batch: 12200 / 21930, Batch Loss: 3.4875681400299072
+[LOG] Timestamp: 03.01.2025 23:15:49, Epoch: 1 / 5
+    Batch: 12400 / 21930, Batch Loss: 1.783603310585022
+[LOG] Timestamp: 03.01.2025 23:16:49, Epoch: 1 / 5
+    Batch: 12600 / 21930, Batch Loss: 2.9128808975219727
+[LOG] Timestamp: 03.01.2025 23:17:49, Epoch: 1 / 5
+    Batch: 12800 / 21930, Batch Loss: 3.014561414718628
+[EVAL] Timestamp: 03.01.2025 23:18:50, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 13000 / 21930, Batch Loss: 2.5591413974761963, Eval loss: 2.808699172397275
+[LOG] Timestamp: 03.01.2025 23:21:49, Epoch: 1 / 5
+    Batch: 13200 / 21930, Batch Loss: 4.014572620391846
+[LOG] Timestamp: 03.01.2025 23:22:49, Epoch: 1 / 5
+    Batch: 13400 / 21930, Batch Loss: 2.5238351821899414
+[LOG] Timestamp: 03.01.2025 23:23:49, Epoch: 1 / 5
+    Batch: 13600 / 21930, Batch Loss: 2.161653995513916
+[LOG] Timestamp: 03.01.2025 23:24:50, Epoch: 1 / 5
+    Batch: 13800 / 21930, Batch Loss: 4.043354511260986
+[EVAL] Timestamp: 03.01.2025 23:25:50, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 14000 / 21930, Batch Loss: 2.5669896602630615, Eval loss: 2.7963680225801744
+[LOG] Timestamp: 03.01.2025 23:28:49, Epoch: 1 / 5
+    Batch: 14200 / 21930, Batch Loss: 2.599658489227295
+[LOG] Timestamp: 03.01.2025 23:29:49, Epoch: 1 / 5
+    Batch: 14400 / 21930, Batch Loss: 3.7217371463775635
+[LOG] Timestamp: 03.01.2025 23:30:49, Epoch: 1 / 5
+    Batch: 14600 / 21930, Batch Loss: 2.9173965454101562
+[LOG] Timestamp: 03.01.2025 23:31:50, Epoch: 1 / 5
+    Batch: 14800 / 21930, Batch Loss: 3.1658527851104736
+[EVAL] Timestamp: 03.01.2025 23:32:50, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 15000 / 21930, Batch Loss: 3.044050693511963, Eval loss: 2.80634899749654
+[LOG] Timestamp: 03.01.2025 23:35:49, Epoch: 1 / 5
+    Batch: 15200 / 21930, Batch Loss: 3.877981185913086
+[LOG] Timestamp: 03.01.2025 23:36:49, Epoch: 1 / 5
+    Batch: 15400 / 21930, Batch Loss: 2.864246129989624
+[LOG] Timestamp: 03.01.2025 23:37:50, Epoch: 1 / 5
+    Batch: 15600 / 21930, Batch Loss: 2.5505573749542236
+[LOG] Timestamp: 03.01.2025 23:38:50, Epoch: 1 / 5
+    Batch: 15800 / 21930, Batch Loss: 3.2128255367279053
+[EVAL] Timestamp: 03.01.2025 23:39:50, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 16000 / 21930, Batch Loss: 3.124495267868042, Eval loss: 2.789718080908917
+[LOG] Timestamp: 03.01.2025 23:42:49, Epoch: 1 / 5
+    Batch: 16200 / 21930, Batch Loss: 3.1530327796936035
+[LOG] Timestamp: 03.01.2025 23:43:50, Epoch: 1 / 5
+    Batch: 16400 / 21930, Batch Loss: 4.041356086730957
+[LOG] Timestamp: 03.01.2025 23:44:50, Epoch: 1 / 5
+    Batch: 16600 / 21930, Batch Loss: 3.54306960105896
+[LOG] Timestamp: 03.01.2025 23:45:50, Epoch: 1 / 5
+    Batch: 16800 / 21930, Batch Loss: 2.944751262664795
+[EVAL] Timestamp: 03.01.2025 23:46:50, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 17000 / 21930, Batch Loss: 3.227573871612549, Eval loss: 2.7896685709988573
+[LOG] Timestamp: 03.01.2025 23:49:49, Epoch: 1 / 5
+    Batch: 17200 / 21930, Batch Loss: 3.336909770965576
+[LOG] Timestamp: 03.01.2025 23:50:50, Epoch: 1 / 5
+    Batch: 17400 / 21930, Batch Loss: 3.5578980445861816
+[LOG] Timestamp: 03.01.2025 23:51:50, Epoch: 1 / 5
+    Batch: 17600 / 21930, Batch Loss: 3.0689697265625
+[LOG] Timestamp: 03.01.2025 23:52:50, Epoch: 1 / 5
+    Batch: 17800 / 21930, Batch Loss: 2.6075496673583984
+[EVAL] Timestamp: 03.01.2025 23:53:51, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 18000 / 21930, Batch Loss: 3.12617564201355, Eval loss: 2.780857284831139
+[LOG] Timestamp: 03.01.2025 23:56:50, Epoch: 1 / 5
+    Batch: 18200 / 21930, Batch Loss: 2.9725966453552246
+[LOG] Timestamp: 03.01.2025 23:57:50, Epoch: 1 / 5
+    Batch: 18400 / 21930, Batch Loss: 5.0079874992370605
+[LOG] Timestamp: 03.01.2025 23:58:50, Epoch: 1 / 5
+    Batch: 18600 / 21930, Batch Loss: 2.746974468231201
+[LOG] Timestamp: 03.01.2025 23:59:51, Epoch: 1 / 5
+    Batch: 18800 / 21930, Batch Loss: 3.11895489692688
+[EVAL] Timestamp: 04.01.2025 00:00:51, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 19000 / 21930, Batch Loss: 2.577197313308716, Eval loss: 2.7701749378477047
+[LOG] Timestamp: 04.01.2025 00:03:50, Epoch: 1 / 5
+    Batch: 19200 / 21930, Batch Loss: 3.94028377532959
+^[[LOG] Timestamp: 04.01.2025 00:04:50, Epoch: 1 / 5
+    Batch: 19400 / 21930, Batch Loss: 3.3361854553222656
+[LOG] Timestamp: 04.01.2025 00:05:51, Epoch: 1 / 5
+    Batch: 19600 / 21930, Batch Loss: 2.6834638118743896
+[LOG] Timestamp: 04.01.2025 00:06:51, Epoch: 1 / 5
+    Batch: 19800 / 21930, Batch Loss: 2.1156251430511475
+[EVAL] Timestamp: 04.01.2025 00:07:51, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 20000 / 21930, Batch Loss: 3.319911003112793, Eval loss: 2.7922283286625182
+[LOG] Timestamp: 04.01.2025 00:10:51, Epoch: 1 / 5
+    Batch: 20200 / 21930, Batch Loss: 2.778386354446411
+[LOG] Timestamp: 04.01.2025 00:11:51, Epoch: 1 / 5
+    Batch: 20400 / 21930, Batch Loss: 2.4149887561798096
+[LOG] Timestamp: 04.01.2025 00:12:51, Epoch: 1 / 5
+    Batch: 20600 / 21930, Batch Loss: 1.4705277681350708
+[LOG] Timestamp: 04.01.2025 00:13:51, Epoch: 1 / 5
+    Batch: 20800 / 21930, Batch Loss: 1.6874984502792358
+[EVAL] Timestamp: 04.01.2025 00:14:52, Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Batch: 21000 / 21930, Batch Loss: 3.1358847618103027, Eval loss: 2.7746158679587585
+[LOG] Timestamp: 04.01.2025 00:17:51, Epoch: 1 / 5
+    Batch: 21200 / 21930, Batch Loss: 1.8980767726898193
+[LOG] Timestamp: 04.01.2025 00:18:51, Epoch: 1 / 5
+    Batch: 21400 / 21930, Batch Loss: 2.6258623600006104
+[LOG] Timestamp: 04.01.2025 00:19:51, Epoch: 1 / 5
+    Batch: 21600 / 21930, Batch Loss: 3.0658023357391357
+[LOG] Timestamp: 04.01.2025 00:20:52, Epoch: 1 / 5
+    Batch: 21800 / 21930, Batch Loss: 2.661719560623169
+[EPOCH EVAL] Timestamp: 04.01.2025 00:21:31) Epoch: 1 / 5
+    Evaluating on 1217 batches...
+    Eval results: 0.21820423258680913, Eval loss: 2.7761272069559593
+Traceback (most recent call last):
+  File "/home/jsegvic/dipl_project/train_race.py", line 41, in <module>
+    train_LLM(
+  File "/home/jsegvic/dipl_project/training.py", line 51, in train_LLM
+    loss.backward()
+  File "/home/jsegvic/.conda/envs/env_jerko/lib/python3.12/site-packages/torch/_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "/home/jsegvic/.conda/envs/env_jerko/lib/python3.12/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "/home/jsegvic/.conda/envs/env_jerko/lib/python3.12/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 786.00 MiB. GPU 0 has a total capacity of 9.56 GiB of which 86.69 MiB is free. Including non-PyTorch memory, this process has 9.47 GiB memory in use. Of the allocated memory 7.78 GiB is allocated by PyTorch, and 1.43 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

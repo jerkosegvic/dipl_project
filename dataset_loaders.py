@@ -46,12 +46,17 @@ TMR = TypeVar('TMR', bound=MultiRC_dataset)
 def load_multirc(
         path: str,
         tokenizer: AutoTokenizer,
+        tokenizer_rag: AutoTokenizer = None,
         save_name: str = None,
         Dataset_: Type[TMR] = MultiRC_dataset,
-        max_length: int = 1024
+        max_length: int = 1024,
+        max_length_rag: int = 512
     ) -> TMR:
     if save_name is None:
-        save_name = "multirc-" + path.split('/')[-1].split('.')[0] + '.pkl'
+        if Dataset_.class_name() == "multirc_base":
+            save_name = "multirc-" + path.split('/')[-1].split('.')[0] + '.pkl'
+        else:
+            save_name = "multirc-" + Dataset_.class_name() + "-" + path.split('/')[-1].split('.')[0] + '.pkl'
 
     save_path = os.path.join(PROC_DATA_DIR, save_name)
 
@@ -78,7 +83,10 @@ def load_multirc(
         sentences = re.findall(pattern, paragraph['text'])
         paragraphs.append(sentences)
     
-    ds = Dataset_(paragraphs, questions_list, tokenizer, max_length)
+    if tokenizer_rag is not None:
+        ds = Dataset_(paragraphs, questions_list, tokenizer, tokenizer_rag, max_length, max_length_rag)
+    else:
+        ds = Dataset_(paragraphs, questions_list, tokenizer, max_length)
     with open(save_path, 'wb') as f:
         pickle.dump(ds, f)
 

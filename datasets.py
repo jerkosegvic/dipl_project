@@ -20,10 +20,11 @@ class Boolq_dataset(torch.utils.data.Dataset):
         self.max_length = max_length
         for (p,q,a) in zip(passages, questions, answers):
             q_enc = tokenizer(p+q+"?", return_tensors='pt', add_special_tokens=False)
-
-            if q_enc["input_ids"][0].shape[0] > max_length:
+            ln = q_enc["input_ids"][0].shape[0]
+            
+            if ln > max_length:
                 continue
-
+            
             ans_pos, ans_neg = tokenizer("Yes.", return_tensors='pt', add_special_tokens=False), tokenizer("No.", return_tensors='pt', add_special_tokens=False)
             pos = tokenizer(p+q+"? Yes.", return_tensors='pt', add_special_tokens=False, max_length=max_length, padding="max_length")
             neg = tokenizer(p+q+"? No.", return_tensors='pt', add_special_tokens=False, max_length=max_length, padding="max_length")
@@ -38,8 +39,8 @@ class Boolq_dataset(torch.utils.data.Dataset):
 
             targets_pos[answer_start:answer_start+answer_len_pos] = pos["input_ids"][0][answer_start:answer_start+answer_len_pos]
             targets_neg[answer_start:answer_start+answer_len_neg] = neg["input_ids"][0][answer_start:answer_start+answer_len_neg]
-            attn_neg[:answer_start+answer_len_neg] = 1
-            attn_pos[:answer_start+answer_len_pos] = 1
+            attn_neg[:ln] = 1
+            attn_pos[:ln] = 1
 
             if a == True:
                 self.encodings.append((pos['input_ids'], attn_pos, targets_pos, neg['input_ids'], attn_neg, targets_neg))
@@ -89,33 +90,48 @@ class MultiRC_dataset(torch.utils.data.Dataset):
         tokenizer: AutoTokenizer,
         max_length: int = 1024
     ) -> None:
-        self.passages = passages
-        self.question_answer_objs = question_answer_objs
+        self.passages = []
+        self.question_answer_objs = []
         self.encodings = []
         self.corrects = []
         self.max_length = max_length
         for (p, q) in zip(passages, question_answer_objs):
             entry = []
-            answer_start = tokenizer(''.join(p) + q.question + "?", return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
+            bs = ''.join(p) + q.question
+            if bs[-1] != "?":
+                bs += "?"
+            answer_start = tokenizer(bs, return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
+
+            save = False
             for (a, c) in zip(q.answers, q.correct):
-                enc = tokenizer(''.join(p) + q.question+"? " + a, return_tensors='pt', add_special_tokens=False, max_length=max_length, padding="max_length")
-                
-                if enc['input_ids'][0].shape[0] > max_length:
+                bs_a = bs + a
+                enc = tokenizer(bs_a, return_tensors='pt', add_special_tokens=False, max_length=max_length, padding="max_length")
+                answer_len = tokenizer(a, return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
+                ln = answer_len + answer_start
+
+                if ln > max_length:
                     continue
                 
                 attn_mask = torch.full(enc['input_ids'][0].shape, 0)
                 targets = torch.full(enc['input_ids'][0].shape, -100)
-
-                answer_len = tokenizer(a, return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
-                attn_mask[:answer_start+answer_len] = 1
+                
+                attn_mask[:ln] = 1
                 targets[answer_start:answer_start+answer_len] = enc['input_ids'][0][answer_start:answer_start+answer_len]
                 entry.append((c, enc['input_ids'], attn_mask, targets))
+                
                 if c:
                     self.corrects.append((enc['input_ids'], attn_mask, targets))
-            
-            if len(entry) == 4:
-                self.encodings.append(entry)
+                    save = True
 
+            # save variable defines if something is added to training list (corrects), if not, the example is skipped
+            if save:
+                self.encodings.append(entry)
+                self.passages.append(p)
+                self.question_answer_objs.append(q)
+
+    def class_name() -> str:
+        return "multirc_base"
+    
     def __getitem__(
         self, 
         index:int
@@ -182,16 +198,17 @@ class RACE_dataset(torch.utils.data.Dataset):
             good = True
             for (i, ans) in enumerate(a):
                 option = tokenizer(p + q_cpy.replace("_", " " + ans + " "), add_special_tokens=False, return_tensors='pt', max_length=max_length, padding="max_length")
-                
-                if option['input_ids'][0].shape[0] > max_length:
+                answer_len = tokenizer(ans, return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
+                ln = tokenizer(p + q_cpy.replace("_", " " + ans + " "), add_special_tokens=False, return_tensors='pt')['input_ids'][0].shape[0]
+
+                if ln > max_length:
                     good = False
                     #print("Too long, skipping")
                     continue
                 
-                answer_len = tokenizer(ans, return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
                 attention_mask = torch.full(option['input_ids'][0].shape, 0)
                 targets = torch.full(option['input_ids'][0].shape, -100)
-                attention_mask[:answer_start+answer_len] = 1
+                attention_mask[:ln] = 1
                 targets[answer_start:answer_start+answer_len] = option['input_ids'][0][answer_start:answer_start+answer_len]
                 
                 tmp.append((option['input_ids'], attention_mask, targets))
@@ -253,14 +270,14 @@ class ReCoRD_dataset(torch.utils.data.Dataset):
             for (a, span) in zip(q.answers, q.answers_span):
                 option = tokenizer(p + " " + q.query[:q.w_ind[0]] + " " + a + " " + q.query[q.w_ind[1]:], return_tensors='pt', 
                                    add_special_tokens=False, max_length=max_length, padding="max_length")
-                
-                if option['input_ids'][0].shape[0] > max_length:
+                ln = option['input_ids'][0].shape[0]
+                if ln > max_length:
                     continue
                 
                 answer_len = tokenizer(a, return_tensors='pt', add_special_tokens=False)['input_ids'][0].shape[0]
                 attention_mask = torch.full(option['input_ids'][0].shape, 0)
                 targets = torch.full(option['input_ids'][0].shape, -100)
-                attention_mask[:answer_start+answer_len] = 1
+                attention_mask[:ln] = 1
                 targets[answer_start:answer_start+answer_len] = option['input_ids'][0][answer_start:answer_start+answer_len]
                 tmp.append((option['input_ids'], attention_mask, targets))
                 self.corrects.append((option['input_ids'], attention_mask, targets))
@@ -296,3 +313,118 @@ class ReCoRD_dataset(torch.utils.data.Dataset):
         one for text, one for attention mask and one for targets. The list contains all possible answers
         '''
         return self.encodings[index]
+    
+class RAG_MultiRC_dataset(MultiRC_dataset):
+    def __init__(
+        self,
+        passages: List[List[str]],
+        question_answer_objs: List[MultiRC_question],
+        tokenizer_llm: AutoTokenizer,
+        tokenizer_retrive: AutoTokenizer,
+        max_length: int = 1024,
+        max_length_enc: int = 512
+    ) -> None:
+        super(RAG_MultiRC_dataset, self).__init__(
+            passages=passages, 
+            question_answer_objs=question_answer_objs, 
+            tokenizer=tokenizer_llm,
+            max_length=max_length
+        )
+        self.questions_enc = []
+        self.docs_enc = []
+        self.docs_enc_all = []
+        self.max_length_enc = max_length_enc
+        for (j,q) in enumerate(self.question_answer_objs):
+            sentences = self.passages[q.passage_index]
+            q_enc_ret = tokenizer_retrive(q.question, return_tensors='pt', add_special_tokens=True, padding="max_length", max_length=self.max_length_enc)
+            q_enc_gen = tokenizer_llm(q.question, return_tensors='pt', add_special_tokens=False)['input_ids']
+            self.questions_enc.append((q_enc_ret, q_enc_gen))
+            obj = []
+            for (i,p) in enumerate(sentences):
+                p_enc_ret = tokenizer_retrive(p, return_tensors='pt', add_special_tokens=True, padding="max_length", max_length=self.max_length_enc)
+                p_enc_gen = tokenizer_llm(p, return_tensors='pt', add_special_tokens=False)['input_ids']
+                cor = True if i in q.sentences_used else False
+                self.docs_enc_all.append((cor, j, p_enc_ret, p_enc_gen))
+                obj.append((cor, p_enc_ret, p_enc_gen))
+
+            self.docs_enc.append(obj)
+
+    def class_name() -> str:
+        return "rag_multirc_base"
+
+    def __getitem__(
+        self, 
+        index: int
+    ) -> Tuple[bool, dict, dict]:
+        '''
+        Returns boolean value(True if sentence is relevant), 
+        encoding dictionary for sentence and encoding dictionary for question
+        '''
+        return self.docs_enc_all[index][0], self.docs_enc_all[index][2], self.questions_enc[self.docs_enc_all[index][1]][0]
+
+    def __len__(
+        self
+    ) -> int:
+        return len(self.docs_enc_all)
+
+    def get_item_eval(
+        self,
+        index: int
+    ) -> Tuple[List[Tuple[bool, dict, torch.Tensor]], Tuple[dict, torch.Tensor]]:
+        '''
+        Returns Tuple of two elements.
+        First is a list of tuples (one for each sentence), 
+        where the first element is boolean value(True if sentence is relevant),
+        the second element is encoding dictionary for sentence and the third element is encoding tensor
+        of input ids for text generation.
+        The second element is encoding dictionary for question and encoding tensor of input ids for text generation.
+        '''
+        return (self.docs_enc[index], self.questions_enc[index])
+
+    def len_eval(
+        self
+    ) -> int:
+        return len(self.docs_enc)
+
+class RAG_MultiRC_dataset_TL(RAG_MultiRC_dataset):
+    def __init__(
+        self,
+        passages: List[List[str]],
+        question_answer_objs: List[MultiRC_question],
+        tokenizer_llm: AutoTokenizer,
+        tokenizer_retrive: AutoTokenizer,
+        max_length: int = 1024,
+        max_length_enc: int = 512
+    ) -> None:
+        super(RAG_MultiRC_dataset_TL, self).__init__(
+            passages=passages, 
+            question_answer_objs=question_answer_objs, 
+            tokenizer_llm=tokenizer_llm,
+            tokenizer_retrive=tokenizer_retrive,
+            max_length=max_length,
+            max_length_enc=max_length_enc
+        )
+        self.triplets = []
+        for (q, obj) in zip(self.questions_enc, self.docs_enc):
+            positives = list(filter(lambda x: x[0] == True, obj))
+            negatives = list(filter(lambda x: x[0] == False, obj))
+            for p in positives:
+                for n in negatives:
+                    self.triplets.append((q[0], p[1], n[1]))
+    
+    def class_name() -> str:
+        return "rag_multirc_triplet_loss"
+    
+    def __getitem__(
+        self, 
+        index: int
+    ) -> Tuple[dict, dict, dict]:
+        '''
+        Returns three encoding dictionaries, one for anchor, one for positive and one for negative
+        '''
+        return self.triplets[index]
+    
+    def __len__(
+        self
+    ) -> int:
+        return len(self.triplets)

@@ -1,7 +1,33 @@
-from models import Model_LLM
+from models import Model_LLM, Retriver
 from typing import List, Tuple, Union
 import torch
-from datasets import Boolq_dataset, MultiRC_dataset, ReCoRD_dataset, RACE_dataset
+from datasets import Boolq_dataset, MultiRC_dataset, ReCoRD_dataset, RACE_dataset, RAG_MultiRC_dataset
+
+def auxilliary_calculate(
+        results: List[Tuple[torch.Tensor, bool]], 
+        return_details: bool = False,
+        threshold: Union[float, None] = None,
+        threshold_total: float = 0.75,
+        loss: bool = True
+    ) -> Tuple[float, float, float]:
+    '''
+    Auxilliary function to calculate accuracy, precision and recall
+    '''
+    if not loss:
+        results = list(map(lambda x: (-x[0], x[1]), results))
+    if not threshold:
+        threshold = min(list(filter(lambda x: x[1], results)), key=lambda x: x[0])[0]
+    
+    TP = len(list(filter(lambda x: x[0] <= threshold and x[1], results)))
+    FP = len(list(filter(lambda x: x[0] <= threshold and not x[1], results)))
+    TN = len(list(filter(lambda x: x[0] > threshold and not x[1], results)))
+    FN = len(list(filter(lambda x: x[0] > threshold and x[1], results)))
+    
+    if return_details:
+        print(results)
+        return (TP + TN) / (TP + TN + FP + FN), TP / (TP + FP), TP / (TP + FN)
+    else:
+        return ( (TP + TN) / (TP + TN + FP + FN) ) >= threshold_total
 
 def evaluate_boolqe_example_llm(
         model: Model_LLM,
@@ -19,39 +45,41 @@ def evaluate_boolqe_example_llm(
     input_ids_neg = input_ids_neg.to(device)
     attention_mask_neg = attention_mask_neg.to(device)
     targets_neg = targets_neg.to(device)
-    loss, logits = model(input_ids, attention_mask, targets)
-    loss_neg, logits_neg = model(input_ids_neg, attention_mask_neg, targets_neg)
+    with torch.no_grad():
+        loss, logits = model(input_ids, attention_mask, targets)
+        loss_neg, logits_neg = model(input_ids_neg, attention_mask_neg, targets_neg)
     return loss.item() < loss_neg.item()
 
 def evaluate_multirc_example_llm(
         model: Model_LLM,
         example: List[Tuple[bool, torch.Tensor, torch.Tensor, torch.Tensor]],
-        treshold: Union[float, None],
-        device: torch.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        threshold: Union[float, None] = None,
+        threshold_total: float = 0.75,
+        device: torch.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
+        return_details: bool = False
     ) -> Tuple[float, float, float]:
     '''
     Evaluate a single MultiRC example, returns accuracy, precission and recall
     '''
     ##TODO: FIX THIS
+    corrects = [x[0] for x in example]
+    input_ids = [x[1] for x in example]
+    attention_masks = [x[2] for x in example]
+    targets = [x[3] for x in example]
     results = []
-    input_ids = torch.stack([x[1] for x in example])
-    attention_mask = torch.stack(x[2] for x in example)
-    targets = torch.stack(x[3] for x in example)
-    input_ids = input_ids.to(device)
-    attention_mask = attention_mask.to(device)
-    targets = targets.to(device)
+    for (c,i,a,t) in zip(corrects, input_ids, attention_masks, targets):
+        with torch.no_grad():
+            res = model(i.to(device), a.to(device), t.to(device))[0].to('cpu')
+        results.append((res, c))
+        i.to('cpu')
+        a.to('cpu')
+        t.to('cpu')
 
     results = sorted(results, key=lambda x: x[0])
 
-    if not treshold:
-        treshold = min(list(filter(lambda x: x[1])), key=lambda x: x[0])[0]
+    return auxilliary_calculate(results, return_details, threshold, threshold_total)
     
-    TP = len(list(filter(lambda x: x[0] <= treshold and x[1])))
-    FP = len(list(filter(lambda x: x[0] <= treshold and not x[1])))
-    TN = len(list(filter(lambda x: x[0] > treshold and not x[1])))
-    FN = len(list(filter(lambda x: x[0] > treshold and x[1])))
-    return (TP + TN) / (TP + TN + FP + FN), TP / (TP + FP), TP / (TP + FN)
-
+    
 def evaluate_race_example_llm(
         model: Model_LLM,
         example: Tuple[int, List[Tuple[torch.Tensor, torch.Tensor, torch.Tensor]]],
@@ -61,15 +89,17 @@ def evaluate_race_example_llm(
     Evaluate a single RACE example, returns if the example is correctly classfied
     '''
     correct, example = example
-    input_ids = torch.stack([x[0] for x in example])
-    attention_mask = torch.stack([x[1] for x in example])
-    targets = torch.stack([x[2] for x in example])
-    input_ids = input_ids.to(device)
-    attention_mask = attention_mask.to(device)
-    targets = targets.to(device)
+    input_ids = [x[0].to(device) for x in example]
+    attention_mask = [x[1].to(device) for x in example]
+    targets = [x[2].to(device) for x in example]
+    losses = []
 
-    loss, logits = model(input_ids, attention_mask, targets)
-    return torch.argmax(loss, dim=0) == correct
+    for (i,a,t) in zip(input_ids, attention_mask, targets):
+        with torch.no_grad():
+            loss, logits = model(i, a, t)
+        losses.append(loss.item())
+
+    return correct == torch.argmax(torch.tensor(losses))
 
 def evaluate_record_example_llm(
         model: Model_LLM,
@@ -90,7 +120,30 @@ def evaluate_record_example_llm(
     input_ids_q = input_ids[:ind]
     decodings = model.decode(input_ids_q, top_k)
 
-    
+def evaluate_multirc_example_retriver(
+        model: Retriver,
+        example: Tuple[List[Tuple[bool, dict, torch.Tensor]], Tuple[dict, torch.Tensor]],
+        device: torch.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
+        threshold: Union[float, None] = None,
+        threshold_total: float = 0.75
+    ) -> bool:
+    '''
+    Evaluate a single MultiRC example, returns if the example is correctly classfied
+    '''
+    docs, question = example
+    results = []
+    q_enc = model(question[0])
+    for (cor,doc,_) in docs:
+        with torch.no_grad():
+            doc_enc = model(doc)
+            res = model.compare(doc_enc, q_enc)
+        results.append((res, cor))
+
+    return auxilliary_calculate(results, threshold=threshold, threshold_total=threshold_total, loss=False)
+
+
+
+
 def evaluate_task_llm(
         model: Model_LLM,
         dataset: Union[Boolq_dataset, RACE_dataset, MultiRC_dataset, ReCoRD_dataset],
@@ -100,18 +153,63 @@ def evaluate_task_llm(
             evaluate_multirc_example_llm,
             evaluate_race_example_llm,
             evaluate_record_example_llm
-        ]
+        ],
+        evaluation_size: int = None
 ) -> float:
     '''
     Evaluate a Language Model on a dataset
     '''
-    model.to(device)
+    #model.to(device)
     correct = 0
     total = 0
-    for ind in range(dataset.len_eval()):
+    if not evaluation_size:
+        evaluation_size = dataset.len_eval()
+
+    model.eval()
+    for ind in range(min(dataset.len_eval(), evaluation_size)):
         example = dataset.get_item_eval(ind)
-        if function(model, example):
+        if function(
+            model=model, 
+            example=example, 
+            device=device
+        ):
             correct += 1
         total += 1
     
+    model.train()
+    return correct / total
+
+def evaluate_retiver(
+    model: Retriver,
+    dataset: Union[RAG_MultiRC_dataset],
+    device: torch.device,
+    function: Union[
+        evaluate_multirc_example_retriver
+    ],
+    evaluation_size: int = None,
+    threshold: Union[float, None] = None,
+    threshold_total: float = 0.75,
+) -> float:
+    '''
+    Evaluate a Retriver model on a dataset
+    '''
+    correct = 0
+    total = 0
+    if not evaluation_size:
+        evaluation_size = dataset.len_eval()
+
+    model.eval()
+    for ind in range(min(dataset.len_eval(), evaluation_size)):
+        example = dataset.get_item_eval(ind)
+        if function(
+            model=model,
+            example=example,
+            device=device,
+            threshold=threshold,
+            threshold_total=threshold_total
+        ):
+            correct += 1
+        total += 1
+    
+    model.train()
     return correct / total

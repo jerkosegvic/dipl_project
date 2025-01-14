@@ -17,6 +17,9 @@ class MultiRC_question:
         self.answers = [a['text'] for a in answers]
         self.correct = [a['isAnswer'] for a in answers]
 
+    def __str__(self):
+        return f"Question: {self.question}\nAnswers: {self.answers}\nCorrect: {self.correct}"
+    
 class ReCoRD_question:
     def __init__(
         self,
