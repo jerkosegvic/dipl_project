@@ -1,4 +1,4 @@
-# dipl_project
+# Evaluating retrival techniques for RAG pipelines (unfinished)
 
 ### Zip file with all datasets
 - https://drive.google.com/file/d/1tZFHkD0ohgFZjlp-CYNW4GYkA3Dvmx1P/view?usp=drive_link
