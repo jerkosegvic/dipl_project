@@ -1,0 +1,1426 @@
+Evaluating model models/multirc_retrivers/retriver_multirc_base/epoch_1.pth
+    Average AUROC: 0.570445340788478
+    Average AUPR: 0.2815888070507226
+    MAP@3: 0.24074074074074067
+    MP@1: 0.20512820512820512
+    MP@3: 0.27350427350427353
+    Eval results @ 0.95: 0.5641025641025641
+
+Evaluating model models/multirc_retrivers/retriver_multirc_base/epoch_2.pth
+    Average AUROC: 0.6509951831030263
+    Average AUPR: 0.3622390438527217
+    MAP@3: 0.32193732193732194
+    MP@1: 0.3333333333333333
+    MP@3: 0.3376068376068376
+    Eval results @ 0.95: 0.6153846153846154
+
+Evaluating model models/multirc_retrivers/retriver_multirc_base/epoch_3.pth
+    Average AUROC: 0.6878884369080448
+    Average AUPR: 0.3930198257610042
+    MAP@3: 0.3945868945868945
+    MP@1: 0.41025641025641024
+    MP@3: 0.4401709401709402
+    Eval results @ 0.95: 0.7948717948717948
+
+Evaluating model models/multirc_retrivers/retriver_multirc_base/epoch_4.pth
+    Average AUROC: 0.7420454704155685
+    Average AUPR: 0.48820699551081775
+    MAP@3: 0.5014245014245015
+    MP@1: 0.5384615384615384
+    MP@3: 0.5170940170940171
+    Eval results @ 0.95: 0.8717948717948718
+
+Evaluating model models/multirc_retrivers/retriver_multirc_base/epoch_5.pth
+    Average AUROC: 0.7364578731000301
+    Average AUPR: 0.45896445470153496
+    MAP@3: 0.4715099715099716
+    MP@1: 0.48717948717948717
+    MP@3: 0.4914529914529915
+    Eval results @ 0.95: 0.8205128205128205
+
+Evaluating model models/multirc_retrivers/retriver_multirc_base/epoch_6.pth
+    Average AUROC: 0.7356802851288147
+    Average AUPR: 0.4482920518883944
+    MAP@3: 0.4686609686609688
+    MP@1: 0.46153846153846156
+    MP@3: 0.4957264957264958
+    Eval results @ 0.95: 0.8974358974358975
+
+Evaluating model models/multirc_retrivers/retriver_multirc_base/epoch_7.pth
+    Average AUROC: 0.742163385361915
+    Average AUPR: 0.501735199772803
+    MAP@3: 0.497150997150997
+    MP@1: 0.5897435897435898
+    MP@3: 0.4658119658119658
+    Eval results @ 0.95: 0.8461538461538461
+
+Evaluating model models/multirc_retrivers/retriver_multirc_base/epoch_8.pth
+    Average AUROC: 0.7507702718487033
+    Average AUPR: 0.507266626504466
+    MAP@3: 0.5085470085470084
+    MP@1: 0.5897435897435898
+    MP@3: 0.48717948717948717
+    Eval results @ 0.95: 0.8717948717948718
+
+Evaluating model models/multirc_retrivers/retriver_multirc_base/final.pth
+    Average AUROC: 0.7507702718487033
+    Average AUPR: 0.507266626504466
+    MAP@3: 0.5085470085470084
+    MP@1: 0.5897435897435898
+    MP@3: 0.48717948717948717
+    Eval results @ 0.95: 0.8717948717948718
+
+Evaluating model models/multirc_retrivers/retriver_multirc_TL/epoch_1.pth
+    Average AUROC: 0.7490718205178989
+    Average AUPR: 0.5591227581285977
+    MAP@3: 0.5783475783475783
+    MP@1: 0.717948717948718
+    MP@3: 0.5042735042735043
+    Eval results @ 0.95: 0.8717948717948718
+
+Evaluating model models/multirc_retrivers/retriver_multirc_TL/epoch_2.pth
+    Average AUROC: 0.7633061700463661
+    Average AUPR: 0.5846495282797083
+    MAP@3: 0.6025641025641024
+    MP@1: 0.7948717948717948
+    MP@3: 0.5
+    Eval results @ 0.95: 0.8974358974358975
+
+Evaluating model models/multirc_retrivers/retriver_multirc_TL/epoch_3.pth
+    Average AUROC: 0.751633082331612
+    Average AUPR: 0.531114514818224
+    MAP@3: 0.5498575498575498
+    MP@1: 0.717948717948718
+    MP@3: 0.47008547008547025
+    Eval results @ 0.95: 0.8974358974358975
+
+Evaluating model models/multirc_retrivers/retriver_multirc_TL/epoch_4.pth
+    Average AUROC: 0.7451482522560954
+    Average AUPR: 0.5521103230642207
+    MAP@3: 0.5826210826210825
+    MP@1: 0.7692307692307693
+    MP@3: 0.4914529914529916
+    Eval results @ 0.95: 0.8461538461538461
+
+Evaluating model models/multirc_retrivers/retriver_multirc_TL/epoch_5.pth
+    Average AUROC: 0.7514988529081666
+    Average AUPR: 0.5599300996858452
+    MAP@3: 0.5740740740740741
+    MP@1: 0.7435897435897436
+    MP@3: 0.4914529914529915
+    Eval results @ 0.95: 0.8461538461538461
+
+Evaluating model models/multirc_retrivers/retriver_multirc_TL/final.pth
+    Average AUROC: 0.7514988529081666
+    Average AUPR: 0.5599300996858452
+    MAP@3: 0.5740740740740741
+    MP@1: 0.7435897435897436
+    MP@3: 0.4914529914529915
+    Eval results @ 0.95: 0.8461538461538461
+
+Evaluating model models/multirc_retrivers/retriver_multirc_PO/epoch_1.pth
+    Average AUROC: 0.6183597538989698
+    Average AUPR: 0.39432901011897986
+    MAP@3: 0.38746438746438744
+    MP@1: 0.4358974358974359
+    MP@3: 0.39316239316239315
+    Eval results @ 0.95: 0.6923076923076923
+
+Evaluating model models/multirc_retrivers/retriver_multirc_PO/epoch_2.pth
+    Average AUROC: 0.6178382302156812
+    Average AUPR: 0.35395843593467524
+    MAP@3: 0.33618233618233617
+    MP@1: 0.358974358974359
+    MP@3: 0.341880341880342
+    Eval results @ 0.95: 0.6153846153846154
+
+Evaluating model models/multirc_retrivers/retriver_multirc_PO/epoch_3.pth
+    Average AUROC: 0.5978032112223288
+    Average AUPR: 0.3400028348052927
+    MAP@3: 0.3276353276353276
+    MP@1: 0.358974358974359
+    MP@3: 0.3162393162393163
+    Eval results @ 0.95: 0.6666666666666666
+
+Evaluating model models/multirc_retrivers/retriver_multirc_PO/epoch_4.pth
+    Average AUROC: 0.6115938799762329
+    Average AUPR: 0.33875033909082186
+    MAP@3: 0.31623931623931617
+    MP@1: 0.358974358974359
+    MP@3: 0.294871794871795
+    Eval results @ 0.95: 0.6410256410256411
+
+Evaluating model models/multirc_retrivers/retriver_multirc_PO/epoch_5.pth
+    Average AUROC: 0.6088309566250742
+    Average AUPR: 0.35111371740603897
+    MAP@3: 0.3319088319088318
+    MP@1: 0.41025641025641024
+    MP@3: 0.3034188034188035
+    Eval results @ 0.95: 0.6666666666666666
+
+Evaluating model models/multirc_retrivers/retriver_multirc_PO/epoch_6.pth
+    Average AUROC: 0.6075939605964117
+    Average AUPR: 0.34609544245035334
+    MAP@3: 0.3319088319088318
+    MP@1: 0.38461538461538464
+    MP@3: 0.3034188034188035
+    Eval results @ 0.95: 0.6666666666666666
+
+Evaluating model models/multirc_retrivers/retriver_multirc_PO/epoch_7.pth
+    Average AUROC: 0.5926871467312644
+    Average AUPR: 0.3346356178495031
+    MAP@3: 0.3034188034188034
+    MP@1: 0.38461538461538464
+    MP@3: 0.2820512820512821
+    Eval results @ 0.95: 0.5897435897435898
+
+Evaluating model models/multirc_retrivers/retriver_multirc_PO/epoch_8.pth
+    Average AUROC: 0.5899781500271697
+    Average AUPR: 0.3305530669720804
+    MAP@3: 0.3034188034188034
+    MP@1: 0.358974358974359
+    MP@3: 0.2820512820512821
+    Eval results @ 0.95: 0.5384615384615384
+
+Evaluating model models/multirc_retrivers/retriver_multirc_PO/final.pth
+    Average AUROC: 0.5899781500271697
+    Average AUPR: 0.3305530669720804
+    MAP@3: 0.3034188034188034
+    MP@1: 0.358974358974359
+    MP@3: 0.2820512820512821
+    Eval results @ 0.95: 0.5384615384615384
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_base/epoch_1.pth
+    Average AUROC: 0.667412609630747
+    Average AUPR: 0.33469325064546146
+    MAP@3: 0.31908831908831903
+    MP@1: 0.28205128205128205
+    MP@3: 0.3675213675213676
+    Eval results @ 0.95: 0.717948717948718
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_base/epoch_2.pth
+    Average AUROC: 0.6787280484584406
+    Average AUPR: 0.4272250300446497
+    MAP@3: 0.43732193732193747
+    MP@1: 0.46153846153846156
+    MP@3: 0.4401709401709403
+    Eval results @ 0.95: 0.7948717948717948
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_base/epoch_3.pth
+    Average AUROC: 0.7277739054699839
+    Average AUPR: 0.5086568726736028
+    MAP@3: 0.5356125356125356
+    MP@1: 0.6153846153846154
+    MP@3: 0.5299145299145298
+    Eval results @ 0.95: 0.8717948717948718
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_base/epoch_4.pth
+    Average AUROC: 0.7470633147716484
+    Average AUPR: 0.5317453811447915
+    MAP@3: 0.5484330484330483
+    MP@1: 0.6410256410256411
+    MP@3: 0.517094017094017
+    Eval results @ 0.95: 0.8974358974358975
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_base/epoch_5.pth
+    Average AUROC: 0.7356856492273156
+    Average AUPR: 0.5144910970895084
+    MAP@3: 0.5227920227920227
+    MP@1: 0.5897435897435898
+    MP@3: 0.5042735042735043
+    Eval results @ 0.95: 0.8974358974358975
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_base/epoch_6.pth
+    Average AUROC: 0.7546201869118533
+    Average AUPR: 0.5360307547811268
+    MAP@3: 0.5527065527065527
+    MP@1: 0.6666666666666666
+    MP@3: 0.5170940170940171
+    Eval results @ 0.95: 0.9230769230769231
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_base/epoch_7.pth
+    Average AUROC: 0.7455559237421983
+    Average AUPR: 0.49948814363010197
+    MAP@3: 0.517094017094017
+    MP@1: 0.5897435897435898
+    MP@3: 0.4871794871794873
+    Eval results @ 0.95: 0.8974358974358975
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_base/epoch_8.pth
+    Average AUROC: 0.7502913435511475
+    Average AUPR: 0.5135045031050778
+    MAP@3: 0.5313390313390313
+    MP@1: 0.6153846153846154
+    MP@3: 0.5042735042735043
+    Eval results @ 0.95: 0.9230769230769231
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_base/final.pth
+    Average AUROC: 0.7502913435511475
+    Average AUPR: 0.5135045031050778
+    MAP@3: 0.5313390313390313
+    MP@1: 0.6153846153846154
+    MP@3: 0.5042735042735043
+    Eval results @ 0.95: 0.9230769230769231
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_TL/epoch_1.pth
+    Average AUROC: 0.7524967656707852
+    Average AUPR: 0.5584018888981134
+    MAP@3: 0.6025641025641024
+    MP@1: 0.6923076923076923
+    MP@3: 0.5641025641025641
+    Eval results @ 0.95: 0.8974358974358975
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_TL/epoch_2.pth
+    Average AUROC: 0.7630839408412939
+    Average AUPR: 0.5467062838460789
+    MAP@3: 0.5854700854700854
+    MP@1: 0.6923076923076923
+    MP@3: 0.5512820512820513
+    Eval results @ 0.95: 0.8717948717948718
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_TL/epoch_3.pth
+    Average AUROC: 0.7570022751395301
+    Average AUPR: 0.5663431831701063
+    MAP@3: 0.6196581196581196
+    MP@1: 0.7692307692307693
+    MP@3: 0.5384615384615385
+    Eval results @ 0.95: 0.9230769230769231
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_TL/epoch_4.pth
+    Average AUROC: 0.7541126130586918
+    Average AUPR: 0.574491099051014
+    MAP@3: 0.6082621082621081
+    MP@1: 0.7435897435897436
+    MP@3: 0.5427350427350428
+    Eval results @ 0.95: 0.8461538461538461
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_TL/epoch_5.pth
+    Average AUROC: 0.7622046889203752
+    Average AUPR: 0.5684453162229369
+    MAP@3: 0.6111111111111109
+    MP@1: 0.7435897435897436
+    MP@3: 0.5384615384615385
+    Eval results @ 0.95: 0.8974358974358975
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_TL/final.pth
+    Average AUROC: 0.7622046889203752
+    Average AUPR: 0.5684453162229369
+    MAP@3: 0.6111111111111109
+    MP@1: 0.7435897435897436
+    MP@3: 0.5384615384615385
+    Eval results @ 0.95: 0.8974358974358975
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_1.pth
+    Average AUROC: 0.6282050647246727
+    Average AUPR: 0.39524198532518956
+    MAP@3: 0.38888888888888884
+    MP@1: 0.4358974358974359
+    MP@3: 0.39743589743589747
+    Eval results @ 0.95: 0.6923076923076923
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_10.pth
+    Average AUROC: 0.5836035378927534
+    Average AUPR: 0.3327280161186547
+    MAP@3: 0.33475783475783477
+    MP@1: 0.358974358974359
+    MP@3: 0.311965811965812
+    Eval results @ 0.95: 0.6410256410256411
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_11.pth
+    Average AUROC: 0.5895534499088421
+    Average AUPR: 0.3439651967252785
+    MAP@3: 0.33618233618233617
+    MP@1: 0.38461538461538464
+    MP@3: 0.30341880341880345
+    Eval results @ 0.95: 0.6153846153846154
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_12.pth
+    Average AUROC: 0.5875999975877426
+    Average AUPR: 0.33513576049199617
+    MAP@3: 0.3176638176638176
+    MP@1: 0.358974358974359
+    MP@3: 0.311965811965812
+    Eval results @ 0.95: 0.6410256410256411
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_13.pth
+    Average AUROC: 0.6012346472518042
+    Average AUPR: 0.3586038488285798
+    MAP@3: 0.3475783475783475
+    MP@1: 0.41025641025641024
+    MP@3: 0.3247863247863248
+    Eval results @ 0.95: 0.6666666666666666
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_14.pth
+    Average AUROC: 0.5960450247827698
+    Average AUPR: 0.340004218593863
+    MAP@3: 0.3333333333333333
+    MP@1: 0.358974358974359
+    MP@3: 0.30769230769230776
+    Eval results @ 0.95: 0.6410256410256411
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_15.pth
+    Average AUROC: 0.596334670231729
+    Average AUPR: 0.33533836830678343
+    MAP@3: 0.3233618233618233
+    MP@1: 0.358974358974359
+    MP@3: 0.2905982905982906
+    Eval results @ 0.95: 0.6153846153846154
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_2.pth
+    Average AUROC: 0.6204857460984913
+    Average AUPR: 0.326090995138685
+    MAP@3: 0.2934472934472934
+    MP@1: 0.28205128205128205
+    MP@3: 0.31623931623931634
+    Eval results @ 0.95: 0.6666666666666666
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_3.pth
+    Average AUROC: 0.6186386394106983
+    Average AUPR: 0.35793296939676017
+    MAP@3: 0.34472934472934474
+    MP@1: 0.358974358974359
+    MP@3: 0.3547008547008548
+    Eval results @ 0.95: 0.6666666666666666
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_4.pth
+    Average AUROC: 0.5918284624779722
+    Average AUPR: 0.3424593265695067
+    MAP@3: 0.33618233618233606
+    MP@1: 0.38461538461538464
+    MP@3: 0.32905982905982906
+    Eval results @ 0.95: 0.6666666666666666
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_5.pth
+    Average AUROC: 0.6221107346720092
+    Average AUPR: 0.39291420495774704
+    MAP@3: 0.3945868945868946
+    MP@1: 0.48717948717948717
+    MP@3: 0.3247863247863248
+    Eval results @ 0.95: 0.717948717948718
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_6.pth
+    Average AUROC: 0.6086691766838824
+    Average AUPR: 0.37752050230368484
+    MAP@3: 0.3774928774928775
+    MP@1: 0.4358974358974359
+    MP@3: 0.33760683760683763
+    Eval results @ 0.95: 0.6666666666666666
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_7.pth
+    Average AUROC: 0.5971931799137682
+    Average AUPR: 0.3361078969678734
+    MAP@3: 0.3276353276353276
+    MP@1: 0.358974358974359
+    MP@3: 0.3290598290598291
+    Eval results @ 0.95: 0.6923076923076923
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_8.pth
+    Average AUROC: 0.5904888979031137
+    Average AUPR: 0.33386096063122334
+    MAP@3: 0.31196581196581197
+    MP@1: 0.358974358974359
+    MP@3: 0.30769230769230776
+    Eval results @ 0.95: 0.6153846153846154
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/epoch_9.pth
+    Average AUROC: 0.6053139172011721
+    Average AUPR: 0.3457217632658709
+    MAP@3: 0.33903133903133903
+    MP@1: 0.358974358974359
+    MP@3: 0.32478632478632485
+    Eval results @ 0.95: 0.6666666666666666
+
+Evaluating model models/multirc_retrivers/dual_retriver_multirc_PO/final.pth
+    Average AUROC: 0.596334670231729
+    Average AUPR: 0.33533836830678343
+    MAP@3: 0.3233618233618233
+    MP@1: 0.358974358974359
+    MP@3: 0.2905982905982906
+    Eval results @ 0.95: 0.6153846153846154
+
+Model: retriver_multirc_base
+  Metric: AVG_AUROC
+    1 - Version: epoch_8.pth, AVG_AUROC: 0.7507702718487033
+    2 - Version: final.pth, AVG_AUROC: 0.7507702718487033
+    3 - Version: epoch_7.pth, AVG_AUROC: 0.742163385361915
+    4 - Version: epoch_4.pth, AVG_AUROC: 0.7420454704155685
+    5 - Version: epoch_5.pth, AVG_AUROC: 0.7364578731000301
+    6 - Version: epoch_6.pth, AVG_AUROC: 0.7356802851288147
+    7 - Version: epoch_3.pth, AVG_AUROC: 0.6878884369080448
+    8 - Version: epoch_2.pth, AVG_AUROC: 0.6509951831030263
+    9 - Version: epoch_1.pth, AVG_AUROC: 0.570445340788478
+
+  Metric: AVG_AUPR
+    1 - Version: epoch_8.pth, AVG_AUPR: 0.507266626504466
+    2 - Version: final.pth, AVG_AUPR: 0.507266626504466
+    3 - Version: epoch_7.pth, AVG_AUPR: 0.501735199772803
+    4 - Version: epoch_4.pth, AVG_AUPR: 0.48820699551081775
+    5 - Version: epoch_5.pth, AVG_AUPR: 0.45896445470153496
+    6 - Version: epoch_6.pth, AVG_AUPR: 0.4482920518883944
+    7 - Version: epoch_3.pth, AVG_AUPR: 0.3930198257610042
+    8 - Version: epoch_2.pth, AVG_AUPR: 0.3622390438527217
+    9 - Version: epoch_1.pth, AVG_AUPR: 0.2815888070507226
+
+  Metric: MAP@3
+    1 - Version: epoch_8.pth, MAP@3: 0.5085470085470084
+    2 - Version: final.pth, MAP@3: 0.5085470085470084
+    3 - Version: epoch_4.pth, MAP@3: 0.5014245014245015
+    4 - Version: epoch_7.pth, MAP@3: 0.497150997150997
+    5 - Version: epoch_5.pth, MAP@3: 0.4715099715099716
+    6 - Version: epoch_6.pth, MAP@3: 0.4686609686609688
+    7 - Version: epoch_3.pth, MAP@3: 0.3945868945868945
+    8 - Version: epoch_2.pth, MAP@3: 0.32193732193732194
+    9 - Version: epoch_1.pth, MAP@3: 0.24074074074074067
+
+  Metric: MP@1
+    1 - Version: epoch_7.pth, MP@1: 0.5897435897435898
+    2 - Version: epoch_8.pth, MP@1: 0.5897435897435898
+    3 - Version: final.pth, MP@1: 0.5897435897435898
+    4 - Version: epoch_4.pth, MP@1: 0.5384615384615384
+    5 - Version: epoch_5.pth, MP@1: 0.48717948717948717
+    6 - Version: epoch_6.pth, MP@1: 0.46153846153846156
+    7 - Version: epoch_3.pth, MP@1: 0.41025641025641024
+    8 - Version: epoch_2.pth, MP@1: 0.3333333333333333
+    9 - Version: epoch_1.pth, MP@1: 0.20512820512820512
+
+  Metric: MP@3
+    1 - Version: epoch_4.pth, MP@3: 0.5170940170940171
+    2 - Version: epoch_6.pth, MP@3: 0.4957264957264958
+    3 - Version: epoch_5.pth, MP@3: 0.4914529914529915
+    4 - Version: epoch_8.pth, MP@3: 0.48717948717948717
+    5 - Version: final.pth, MP@3: 0.48717948717948717
+    6 - Version: epoch_7.pth, MP@3: 0.4658119658119658
+    7 - Version: epoch_3.pth, MP@3: 0.4401709401709402
+    8 - Version: epoch_2.pth, MP@3: 0.3376068376068376
+    9 - Version: epoch_1.pth, MP@3: 0.27350427350427353
+
+  Metric: Eval@0.95
+    1 - Version: epoch_6.pth, Eval@0.95: 0.8974358974358975
+    2 - Version: epoch_4.pth, Eval@0.95: 0.8717948717948718
+    3 - Version: epoch_8.pth, Eval@0.95: 0.8717948717948718
+    4 - Version: final.pth, Eval@0.95: 0.8717948717948718
+    5 - Version: epoch_7.pth, Eval@0.95: 0.8461538461538461
+    6 - Version: epoch_5.pth, Eval@0.95: 0.8205128205128205
+    7 - Version: epoch_3.pth, Eval@0.95: 0.7948717948717948
+    8 - Version: epoch_2.pth, Eval@0.95: 0.6153846153846154
+    9 - Version: epoch_1.pth, Eval@0.95: 0.5641025641025641
+
+  Overall Ranking for Model: retriver_multirc_base
+  1 - Version: epoch_8.pth, Total Rank: 12
+  2 - Version: final.pth, Total Rank: 18
+  3 - Version: epoch_4.pth, Total Rank: 18
+  4 - Version: epoch_7.pth, Total Rank: 22
+  5 - Version: epoch_6.pth, Total Rank: 27
+  6 - Version: epoch_5.pth, Total Rank: 29
+  7 - Version: epoch_3.pth, Total Rank: 42
+  8 - Version: epoch_2.pth, Total Rank: 48
+  9 - Version: epoch_1.pth, Total Rank: 54
+
+Model: retriver_multirc_TL
+  Metric: AVG_AUROC
+    1 - Version: epoch_2.pth, AVG_AUROC: 0.7633061700463661
+    2 - Version: epoch_3.pth, AVG_AUROC: 0.751633082331612
+    3 - Version: epoch_5.pth, AVG_AUROC: 0.7514988529081666
+    4 - Version: final.pth, AVG_AUROC: 0.7514988529081666
+    5 - Version: epoch_1.pth, AVG_AUROC: 0.7490718205178989
+    6 - Version: epoch_4.pth, AVG_AUROC: 0.7451482522560954
+
+  Metric: AVG_AUPR
+    1 - Version: epoch_2.pth, AVG_AUPR: 0.5846495282797083
+    2 - Version: epoch_5.pth, AVG_AUPR: 0.5599300996858452
+    3 - Version: final.pth, AVG_AUPR: 0.5599300996858452
+    4 - Version: epoch_1.pth, AVG_AUPR: 0.5591227581285977
+    5 - Version: epoch_4.pth, AVG_AUPR: 0.5521103230642207
+    6 - Version: epoch_3.pth, AVG_AUPR: 0.531114514818224
+
+  Metric: MAP@3
+    1 - Version: epoch_2.pth, MAP@3: 0.6025641025641024
+    2 - Version: epoch_4.pth, MAP@3: 0.5826210826210825
+    3 - Version: epoch_1.pth, MAP@3: 0.5783475783475783
+    4 - Version: epoch_5.pth, MAP@3: 0.5740740740740741
+    5 - Version: final.pth, MAP@3: 0.5740740740740741
+    6 - Version: epoch_3.pth, MAP@3: 0.5498575498575498
+
+  Metric: MP@1
+    1 - Version: epoch_2.pth, MP@1: 0.7948717948717948
+    2 - Version: epoch_4.pth, MP@1: 0.7692307692307693
+    3 - Version: epoch_5.pth, MP@1: 0.7435897435897436
+    4 - Version: final.pth, MP@1: 0.7435897435897436
+    5 - Version: epoch_1.pth, MP@1: 0.717948717948718
+    6 - Version: epoch_3.pth, MP@1: 0.717948717948718
+
+  Metric: MP@3
+    1 - Version: epoch_1.pth, MP@3: 0.5042735042735043
+    2 - Version: epoch_2.pth, MP@3: 0.5
+    3 - Version: epoch_4.pth, MP@3: 0.4914529914529916
+    4 - Version: epoch_5.pth, MP@3: 0.4914529914529915
+    5 - Version: final.pth, MP@3: 0.4914529914529915
+    6 - Version: epoch_3.pth, MP@3: 0.47008547008547025
+
+  Metric: Eval@0.95
+    1 - Version: epoch_2.pth, Eval@0.95: 0.8974358974358975
+    2 - Version: epoch_3.pth, Eval@0.95: 0.8974358974358975
+    3 - Version: epoch_1.pth, Eval@0.95: 0.8717948717948718
+    4 - Version: epoch_4.pth, Eval@0.95: 0.8461538461538461
+    5 - Version: epoch_5.pth, Eval@0.95: 0.8461538461538461
+    6 - Version: final.pth, Eval@0.95: 0.8461538461538461
+
+  Overall Ranking for Model: retriver_multirc_TL
+  1 - Version: epoch_2.pth, Total Rank: 7
+  2 - Version: epoch_5.pth, Total Rank: 21
+  3 - Version: epoch_1.pth, Total Rank: 21
+  4 - Version: epoch_4.pth, Total Rank: 22
+  5 - Version: final.pth, Total Rank: 27
+  6 - Version: epoch_3.pth, Total Rank: 28
+
+Model: retriver_multirc_PO
+  Metric: AVG_AUROC
+    1 - Version: epoch_1.pth, AVG_AUROC: 0.6183597538989698
+    2 - Version: epoch_2.pth, AVG_AUROC: 0.6178382302156812
+    3 - Version: epoch_4.pth, AVG_AUROC: 0.6115938799762329
+    4 - Version: epoch_5.pth, AVG_AUROC: 0.6088309566250742
+    5 - Version: epoch_6.pth, AVG_AUROC: 0.6075939605964117
+    6 - Version: epoch_3.pth, AVG_AUROC: 0.5978032112223288
+    7 - Version: epoch_7.pth, AVG_AUROC: 0.5926871467312644
+    8 - Version: epoch_8.pth, AVG_AUROC: 0.5899781500271697
+    9 - Version: final.pth, AVG_AUROC: 0.5899781500271697
+
+  Metric: AVG_AUPR
+    1 - Version: epoch_1.pth, AVG_AUPR: 0.39432901011897986
+    2 - Version: epoch_2.pth, AVG_AUPR: 0.35395843593467524
+    3 - Version: epoch_5.pth, AVG_AUPR: 0.35111371740603897
+    4 - Version: epoch_6.pth, AVG_AUPR: 0.34609544245035334
+    5 - Version: epoch_3.pth, AVG_AUPR: 0.3400028348052927
+    6 - Version: epoch_4.pth, AVG_AUPR: 0.33875033909082186
+    7 - Version: epoch_7.pth, AVG_AUPR: 0.3346356178495031
+    8 - Version: epoch_8.pth, AVG_AUPR: 0.3305530669720804
+    9 - Version: final.pth, AVG_AUPR: 0.3305530669720804
+
+  Metric: MAP@3
+    1 - Version: epoch_1.pth, MAP@3: 0.38746438746438744
+    2 - Version: epoch_2.pth, MAP@3: 0.33618233618233617
+    3 - Version: epoch_5.pth, MAP@3: 0.3319088319088318
+    4 - Version: epoch_6.pth, MAP@3: 0.3319088319088318
+    5 - Version: epoch_3.pth, MAP@3: 0.3276353276353276
+    6 - Version: epoch_4.pth, MAP@3: 0.31623931623931617
+    7 - Version: epoch_7.pth, MAP@3: 0.3034188034188034
+    8 - Version: epoch_8.pth, MAP@3: 0.3034188034188034
+    9 - Version: final.pth, MAP@3: 0.3034188034188034
+
+  Metric: MP@1
+    1 - Version: epoch_1.pth, MP@1: 0.4358974358974359
+    2 - Version: epoch_5.pth, MP@1: 0.41025641025641024
+    3 - Version: epoch_6.pth, MP@1: 0.38461538461538464
+    4 - Version: epoch_7.pth, MP@1: 0.38461538461538464
+    5 - Version: epoch_2.pth, MP@1: 0.358974358974359
+    6 - Version: epoch_3.pth, MP@1: 0.358974358974359
+    7 - Version: epoch_4.pth, MP@1: 0.358974358974359
+    8 - Version: epoch_8.pth, MP@1: 0.358974358974359
+    9 - Version: final.pth, MP@1: 0.358974358974359
+
+  Metric: MP@3
+    1 - Version: epoch_1.pth, MP@3: 0.39316239316239315
+    2 - Version: epoch_2.pth, MP@3: 0.341880341880342
+    3 - Version: epoch_3.pth, MP@3: 0.3162393162393163
+    4 - Version: epoch_5.pth, MP@3: 0.3034188034188035
+    5 - Version: epoch_6.pth, MP@3: 0.3034188034188035
+    6 - Version: epoch_4.pth, MP@3: 0.294871794871795
+    7 - Version: epoch_7.pth, MP@3: 0.2820512820512821
+    8 - Version: epoch_8.pth, MP@3: 0.2820512820512821
+    9 - Version: final.pth, MP@3: 0.2820512820512821
+
+  Metric: Eval@0.95
+    1 - Version: epoch_1.pth, Eval@0.95: 0.6923076923076923
+    2 - Version: epoch_3.pth, Eval@0.95: 0.6666666666666666
+    3 - Version: epoch_5.pth, Eval@0.95: 0.6666666666666666
+    4 - Version: epoch_6.pth, Eval@0.95: 0.6666666666666666
+    5 - Version: epoch_4.pth, Eval@0.95: 0.6410256410256411
+    6 - Version: epoch_2.pth, Eval@0.95: 0.6153846153846154
+    7 - Version: epoch_7.pth, Eval@0.95: 0.5897435897435898
+    8 - Version: epoch_8.pth, Eval@0.95: 0.5384615384615384
+    9 - Version: final.pth, Eval@0.95: 0.5384615384615384
+
+  Overall Ranking for Model: retriver_multirc_PO
+  1 - Version: epoch_1.pth, Total Rank: 6
+  2 - Version: epoch_2.pth, Total Rank: 19
+  3 - Version: epoch_5.pth, Total Rank: 19
+  4 - Version: epoch_6.pth, Total Rank: 25
+  5 - Version: epoch_3.pth, Total Rank: 27
+  6 - Version: epoch_4.pth, Total Rank: 33
+  7 - Version: epoch_7.pth, Total Rank: 39
+  8 - Version: epoch_8.pth, Total Rank: 48
+  9 - Version: final.pth, Total Rank: 54
+
+Model: dual_retriver_multirc_base
+  Metric: AVG_AUROC
+    1 - Version: epoch_6.pth, AVG_AUROC: 0.7546201869118533
+    2 - Version: epoch_8.pth, AVG_AUROC: 0.7502913435511475
+    3 - Version: final.pth, AVG_AUROC: 0.7502913435511475
+    4 - Version: epoch_4.pth, AVG_AUROC: 0.7470633147716484
+    5 - Version: epoch_7.pth, AVG_AUROC: 0.7455559237421983
+    6 - Version: epoch_5.pth, AVG_AUROC: 0.7356856492273156
+    7 - Version: epoch_3.pth, AVG_AUROC: 0.7277739054699839
+    8 - Version: epoch_2.pth, AVG_AUROC: 0.6787280484584406
+    9 - Version: epoch_1.pth, AVG_AUROC: 0.667412609630747
+
+  Metric: AVG_AUPR
+    1 - Version: epoch_6.pth, AVG_AUPR: 0.5360307547811268
+    2 - Version: epoch_4.pth, AVG_AUPR: 0.5317453811447915
+    3 - Version: epoch_5.pth, AVG_AUPR: 0.5144910970895084
+    4 - Version: epoch_8.pth, AVG_AUPR: 0.5135045031050778
+    5 - Version: final.pth, AVG_AUPR: 0.5135045031050778
+    6 - Version: epoch_3.pth, AVG_AUPR: 0.5086568726736028
+    7 - Version: epoch_7.pth, AVG_AUPR: 0.49948814363010197
+    8 - Version: epoch_2.pth, AVG_AUPR: 0.4272250300446497
+    9 - Version: epoch_1.pth, AVG_AUPR: 0.33469325064546146
+
+  Metric: MAP@3
+    1 - Version: epoch_6.pth, MAP@3: 0.5527065527065527
+    2 - Version: epoch_4.pth, MAP@3: 0.5484330484330483
+    3 - Version: epoch_3.pth, MAP@3: 0.5356125356125356
+    4 - Version: epoch_8.pth, MAP@3: 0.5313390313390313
+    5 - Version: final.pth, MAP@3: 0.5313390313390313
+    6 - Version: epoch_5.pth, MAP@3: 0.5227920227920227
+    7 - Version: epoch_7.pth, MAP@3: 0.517094017094017
+    8 - Version: epoch_2.pth, MAP@3: 0.43732193732193747
+    9 - Version: epoch_1.pth, MAP@3: 0.31908831908831903
+
+  Metric: MP@1
+    1 - Version: epoch_6.pth, MP@1: 0.6666666666666666
+    2 - Version: epoch_4.pth, MP@1: 0.6410256410256411
+    3 - Version: epoch_3.pth, MP@1: 0.6153846153846154
+    4 - Version: epoch_8.pth, MP@1: 0.6153846153846154
+    5 - Version: final.pth, MP@1: 0.6153846153846154
+    6 - Version: epoch_5.pth, MP@1: 0.5897435897435898
+    7 - Version: epoch_7.pth, MP@1: 0.5897435897435898
+    8 - Version: epoch_2.pth, MP@1: 0.46153846153846156
+    9 - Version: epoch_1.pth, MP@1: 0.28205128205128205
+
+  Metric: MP@3
+    1 - Version: epoch_3.pth, MP@3: 0.5299145299145298
+    2 - Version: epoch_6.pth, MP@3: 0.5170940170940171
+    3 - Version: epoch_4.pth, MP@3: 0.517094017094017
+    4 - Version: epoch_5.pth, MP@3: 0.5042735042735043
+    5 - Version: epoch_8.pth, MP@3: 0.5042735042735043
+    6 - Version: final.pth, MP@3: 0.5042735042735043
+    7 - Version: epoch_7.pth, MP@3: 0.4871794871794873
+    8 - Version: epoch_2.pth, MP@3: 0.4401709401709403
+    9 - Version: epoch_1.pth, MP@3: 0.3675213675213676
+
+  Metric: Eval@0.95
+    1 - Version: epoch_6.pth, Eval@0.95: 0.9230769230769231
+    2 - Version: epoch_8.pth, Eval@0.95: 0.9230769230769231
+    3 - Version: final.pth, Eval@0.95: 0.9230769230769231
+    4 - Version: epoch_4.pth, Eval@0.95: 0.8974358974358975
+    5 - Version: epoch_5.pth, Eval@0.95: 0.8974358974358975
+    6 - Version: epoch_7.pth, Eval@0.95: 0.8974358974358975
+    7 - Version: epoch_3.pth, Eval@0.95: 0.8717948717948718
+    8 - Version: epoch_2.pth, Eval@0.95: 0.7948717948717948
+    9 - Version: epoch_1.pth, Eval@0.95: 0.717948717948718
+
+  Overall Ranking for Model: dual_retriver_multirc_base
+  1 - Version: epoch_6.pth, Total Rank: 7
+  2 - Version: epoch_4.pth, Total Rank: 17
+  3 - Version: epoch_8.pth, Total Rank: 21
+  4 - Version: final.pth, Total Rank: 27
+  5 - Version: epoch_3.pth, Total Rank: 27
+  6 - Version: epoch_5.pth, Total Rank: 30
+  7 - Version: epoch_7.pth, Total Rank: 39
+  8 - Version: epoch_2.pth, Total Rank: 48
+  9 - Version: epoch_1.pth, Total Rank: 54
+
+Model: dual_retriver_multirc_TL
+  Metric: AVG_AUROC
+    1 - Version: epoch_2.pth, AVG_AUROC: 0.7630839408412939
+    2 - Version: epoch_5.pth, AVG_AUROC: 0.7622046889203752
+    3 - Version: final.pth, AVG_AUROC: 0.7622046889203752
+    4 - Version: epoch_3.pth, AVG_AUROC: 0.7570022751395301
+    5 - Version: epoch_4.pth, AVG_AUROC: 0.7541126130586918
+    6 - Version: epoch_1.pth, AVG_AUROC: 0.7524967656707852
+
+  Metric: AVG_AUPR
+    1 - Version: epoch_4.pth, AVG_AUPR: 0.574491099051014
+    2 - Version: epoch_5.pth, AVG_AUPR: 0.5684453162229369
+    3 - Version: final.pth, AVG_AUPR: 0.5684453162229369
+    4 - Version: epoch_3.pth, AVG_AUPR: 0.5663431831701063
+    5 - Version: epoch_1.pth, AVG_AUPR: 0.5584018888981134
+    6 - Version: epoch_2.pth, AVG_AUPR: 0.5467062838460789
+
+  Metric: MAP@3
+    1 - Version: epoch_3.pth, MAP@3: 0.6196581196581196
+    2 - Version: epoch_5.pth, MAP@3: 0.6111111111111109
+    3 - Version: final.pth, MAP@3: 0.6111111111111109
+    4 - Version: epoch_4.pth, MAP@3: 0.6082621082621081
+    5 - Version: epoch_1.pth, MAP@3: 0.6025641025641024
+    6 - Version: epoch_2.pth, MAP@3: 0.5854700854700854
+
+  Metric: MP@1
+    1 - Version: epoch_3.pth, MP@1: 0.7692307692307693
+    2 - Version: epoch_4.pth, MP@1: 0.7435897435897436
+    3 - Version: epoch_5.pth, MP@1: 0.7435897435897436
+    4 - Version: final.pth, MP@1: 0.7435897435897436
+    5 - Version: epoch_1.pth, MP@1: 0.6923076923076923
+    6 - Version: epoch_2.pth, MP@1: 0.6923076923076923
+
+  Metric: MP@3
+    1 - Version: epoch_1.pth, MP@3: 0.5641025641025641
+    2 - Version: epoch_2.pth, MP@3: 0.5512820512820513
+    3 - Version: epoch_4.pth, MP@3: 0.5427350427350428
+    4 - Version: epoch_3.pth, MP@3: 0.5384615384615385
+    5 - Version: epoch_5.pth, MP@3: 0.5384615384615385
+    6 - Version: final.pth, MP@3: 0.5384615384615385
+
+  Metric: Eval@0.95
+    1 - Version: epoch_3.pth, Eval@0.95: 0.9230769230769231
+    2 - Version: epoch_1.pth, Eval@0.95: 0.8974358974358975
+    3 - Version: epoch_5.pth, Eval@0.95: 0.8974358974358975
+    4 - Version: final.pth, Eval@0.95: 0.8974358974358975
+    5 - Version: epoch_2.pth, Eval@0.95: 0.8717948717948718
+    6 - Version: epoch_4.pth, Eval@0.95: 0.8461538461538461
+
+  Overall Ranking for Model: dual_retriver_multirc_TL
+  1 - Version: epoch_3.pth, Total Rank: 15
+  2 - Version: epoch_5.pth, Total Rank: 17
+  3 - Version: epoch_4.pth, Total Rank: 21
+  4 - Version: final.pth, Total Rank: 23
+  5 - Version: epoch_1.pth, Total Rank: 24
+  6 - Version: epoch_2.pth, Total Rank: 26
+
+Model: dual_retriver_multirc_PO
+  Metric: AVG_AUROC
+    1 - Version: epoch_1.pth, AVG_AUROC: 0.6282050647246727
+    2 - Version: epoch_5.pth, AVG_AUROC: 0.6221107346720092
+    3 - Version: epoch_2.pth, AVG_AUROC: 0.6204857460984913
+    4 - Version: epoch_3.pth, AVG_AUROC: 0.6186386394106983
+    5 - Version: epoch_6.pth, AVG_AUROC: 0.6086691766838824
+    6 - Version: epoch_9.pth, AVG_AUROC: 0.6053139172011721
+    7 - Version: epoch_13.pth, AVG_AUROC: 0.6012346472518042
+    8 - Version: epoch_7.pth, AVG_AUROC: 0.5971931799137682
+    9 - Version: epoch_15.pth, AVG_AUROC: 0.596334670231729
+    10 - Version: final.pth, AVG_AUROC: 0.596334670231729
+    11 - Version: epoch_14.pth, AVG_AUROC: 0.5960450247827698
+    12 - Version: epoch_4.pth, AVG_AUROC: 0.5918284624779722
+    13 - Version: epoch_8.pth, AVG_AUROC: 0.5904888979031137
+    14 - Version: epoch_11.pth, AVG_AUROC: 0.5895534499088421
+    15 - Version: epoch_12.pth, AVG_AUROC: 0.5875999975877426
+    16 - Version: epoch_10.pth, AVG_AUROC: 0.5836035378927534
+
+  Metric: AVG_AUPR
+    1 - Version: epoch_1.pth, AVG_AUPR: 0.39524198532518956
+    2 - Version: epoch_5.pth, AVG_AUPR: 0.39291420495774704
+    3 - Version: epoch_6.pth, AVG_AUPR: 0.37752050230368484
+    4 - Version: epoch_13.pth, AVG_AUPR: 0.3586038488285798
+    5 - Version: epoch_3.pth, AVG_AUPR: 0.35793296939676017
+    6 - Version: epoch_9.pth, AVG_AUPR: 0.3457217632658709
+    7 - Version: epoch_11.pth, AVG_AUPR: 0.3439651967252785
+    8 - Version: epoch_4.pth, AVG_AUPR: 0.3424593265695067
+    9 - Version: epoch_14.pth, AVG_AUPR: 0.340004218593863
+    10 - Version: epoch_7.pth, AVG_AUPR: 0.3361078969678734
+    11 - Version: epoch_15.pth, AVG_AUPR: 0.33533836830678343
+    12 - Version: final.pth, AVG_AUPR: 0.33533836830678343
+    13 - Version: epoch_12.pth, AVG_AUPR: 0.33513576049199617
+    14 - Version: epoch_8.pth, AVG_AUPR: 0.33386096063122334
+    15 - Version: epoch_10.pth, AVG_AUPR: 0.3327280161186547
+    16 - Version: epoch_2.pth, AVG_AUPR: 0.326090995138685
+
+  Metric: MAP@3
+    1 - Version: epoch_5.pth, MAP@3: 0.3945868945868946
+    2 - Version: epoch_1.pth, MAP@3: 0.38888888888888884
+    3 - Version: epoch_6.pth, MAP@3: 0.3774928774928775
+    4 - Version: epoch_13.pth, MAP@3: 0.3475783475783475
+    5 - Version: epoch_3.pth, MAP@3: 0.34472934472934474
+    6 - Version: epoch_9.pth, MAP@3: 0.33903133903133903
+    7 - Version: epoch_11.pth, MAP@3: 0.33618233618233617
+    8 - Version: epoch_4.pth, MAP@3: 0.33618233618233606
+    9 - Version: epoch_10.pth, MAP@3: 0.33475783475783477
+    10 - Version: epoch_14.pth, MAP@3: 0.3333333333333333
+    11 - Version: epoch_7.pth, MAP@3: 0.3276353276353276
+    12 - Version: epoch_15.pth, MAP@3: 0.3233618233618233
+    13 - Version: final.pth, MAP@3: 0.3233618233618233
+    14 - Version: epoch_12.pth, MAP@3: 0.3176638176638176
+    15 - Version: epoch_8.pth, MAP@3: 0.31196581196581197
+    16 - Version: epoch_2.pth, MAP@3: 0.2934472934472934
+
+  Metric: MP@1
+    1 - Version: epoch_5.pth, MP@1: 0.48717948717948717
+    2 - Version: epoch_1.pth, MP@1: 0.4358974358974359
+    3 - Version: epoch_6.pth, MP@1: 0.4358974358974359
+    4 - Version: epoch_13.pth, MP@1: 0.41025641025641024
+    5 - Version: epoch_11.pth, MP@1: 0.38461538461538464
+    6 - Version: epoch_4.pth, MP@1: 0.38461538461538464
+    7 - Version: epoch_10.pth, MP@1: 0.358974358974359
+    8 - Version: epoch_12.pth, MP@1: 0.358974358974359
+    9 - Version: epoch_14.pth, MP@1: 0.358974358974359
+    10 - Version: epoch_15.pth, MP@1: 0.358974358974359
+    11 - Version: epoch_3.pth, MP@1: 0.358974358974359
+    12 - Version: epoch_7.pth, MP@1: 0.358974358974359
+    13 - Version: epoch_8.pth, MP@1: 0.358974358974359
+    14 - Version: epoch_9.pth, MP@1: 0.358974358974359
+    15 - Version: final.pth, MP@1: 0.358974358974359
+    16 - Version: epoch_2.pth, MP@1: 0.28205128205128205
+
+  Metric: MP@3
+    1 - Version: epoch_1.pth, MP@3: 0.39743589743589747
+    2 - Version: epoch_3.pth, MP@3: 0.3547008547008548
+    3 - Version: epoch_6.pth, MP@3: 0.33760683760683763
+    4 - Version: epoch_7.pth, MP@3: 0.3290598290598291
+    5 - Version: epoch_4.pth, MP@3: 0.32905982905982906
+    6 - Version: epoch_9.pth, MP@3: 0.32478632478632485
+    7 - Version: epoch_13.pth, MP@3: 0.3247863247863248
+    8 - Version: epoch_5.pth, MP@3: 0.3247863247863248
+    9 - Version: epoch_2.pth, MP@3: 0.31623931623931634
+    10 - Version: epoch_10.pth, MP@3: 0.311965811965812
+    11 - Version: epoch_12.pth, MP@3: 0.311965811965812
+    12 - Version: epoch_14.pth, MP@3: 0.30769230769230776
+    13 - Version: epoch_8.pth, MP@3: 0.30769230769230776
+    14 - Version: epoch_11.pth, MP@3: 0.30341880341880345
+    15 - Version: epoch_15.pth, MP@3: 0.2905982905982906
+    16 - Version: final.pth, MP@3: 0.2905982905982906
+
+  Metric: Eval@0.95
+    1 - Version: epoch_5.pth, Eval@0.95: 0.717948717948718
+    2 - Version: epoch_1.pth, Eval@0.95: 0.6923076923076923
+    3 - Version: epoch_7.pth, Eval@0.95: 0.6923076923076923
+    4 - Version: epoch_13.pth, Eval@0.95: 0.6666666666666666
+    5 - Version: epoch_2.pth, Eval@0.95: 0.6666666666666666
+    6 - Version: epoch_3.pth, Eval@0.95: 0.6666666666666666
+    7 - Version: epoch_4.pth, Eval@0.95: 0.6666666666666666
+    8 - Version: epoch_6.pth, Eval@0.95: 0.6666666666666666
+    9 - Version: epoch_9.pth, Eval@0.95: 0.6666666666666666
+    10 - Version: epoch_10.pth, Eval@0.95: 0.6410256410256411
+    11 - Version: epoch_12.pth, Eval@0.95: 0.6410256410256411
+    12 - Version: epoch_14.pth, Eval@0.95: 0.6410256410256411
+    13 - Version: epoch_11.pth, Eval@0.95: 0.6153846153846154
+    14 - Version: epoch_15.pth, Eval@0.95: 0.6153846153846154
+    15 - Version: epoch_8.pth, Eval@0.95: 0.6153846153846154
+    16 - Version: final.pth, Eval@0.95: 0.6153846153846154
+
+  Overall Ranking for Model: dual_retriver_multirc_PO
+  1 - Version: epoch_1.pth, Total Rank: 9
+  2 - Version: epoch_5.pth, Total Rank: 15
+  3 - Version: epoch_6.pth, Total Rank: 25
+  4 - Version: epoch_13.pth, Total Rank: 30
+  5 - Version: epoch_3.pth, Total Rank: 33
+  6 - Version: epoch_4.pth, Total Rank: 46
+  7 - Version: epoch_9.pth, Total Rank: 47
+  8 - Version: epoch_7.pth, Total Rank: 48
+  9 - Version: epoch_11.pth, Total Rank: 60
+  10 - Version: epoch_14.pth, Total Rank: 63
+  11 - Version: epoch_2.pth, Total Rank: 65
+  12 - Version: epoch_10.pth, Total Rank: 67
+  13 - Version: epoch_15.pth, Total Rank: 71
+  14 - Version: epoch_12.pth, Total Rank: 72
+  15 - Version: final.pth, Total Rank: 82
+  16 - Version: epoch_8.pth, Total Rank: 83
+
+Cumulative Metric: AVG_AUROC
+  1 - Model_Version: retriver_multirc_TL_epoch_2.pth, AVG_AUROC: 0.7633061700463661
+  2 - Model_Version: dual_retriver_multirc_TL_epoch_2.pth, AVG_AUROC: 0.7630839408412939
+  3 - Model_Version: dual_retriver_multirc_TL_epoch_5.pth, AVG_AUROC: 0.7622046889203752
+  4 - Model_Version: dual_retriver_multirc_TL_final.pth, AVG_AUROC: 0.7622046889203752
+  5 - Model_Version: dual_retriver_multirc_TL_epoch_3.pth, AVG_AUROC: 0.7570022751395301
+  6 - Model_Version: dual_retriver_multirc_base_epoch_6.pth, AVG_AUROC: 0.7546201869118533
+  7 - Model_Version: dual_retriver_multirc_TL_epoch_4.pth, AVG_AUROC: 0.7541126130586918
+  8 - Model_Version: dual_retriver_multirc_TL_epoch_1.pth, AVG_AUROC: 0.7524967656707852
+  9 - Model_Version: retriver_multirc_TL_epoch_3.pth, AVG_AUROC: 0.751633082331612
+  10 - Model_Version: retriver_multirc_TL_epoch_5.pth, AVG_AUROC: 0.7514988529081666
+  11 - Model_Version: retriver_multirc_TL_final.pth, AVG_AUROC: 0.7514988529081666
+  12 - Model_Version: retriver_multirc_base_epoch_8.pth, AVG_AUROC: 0.7507702718487033
+  13 - Model_Version: retriver_multirc_base_final.pth, AVG_AUROC: 0.7507702718487033
+  14 - Model_Version: dual_retriver_multirc_base_epoch_8.pth, AVG_AUROC: 0.7502913435511475
+  15 - Model_Version: dual_retriver_multirc_base_final.pth, AVG_AUROC: 0.7502913435511475
+  16 - Model_Version: retriver_multirc_TL_epoch_1.pth, AVG_AUROC: 0.7490718205178989
+  17 - Model_Version: dual_retriver_multirc_base_epoch_4.pth, AVG_AUROC: 0.7470633147716484
+  18 - Model_Version: dual_retriver_multirc_base_epoch_7.pth, AVG_AUROC: 0.7455559237421983
+  19 - Model_Version: retriver_multirc_TL_epoch_4.pth, AVG_AUROC: 0.7451482522560954
+  20 - Model_Version: retriver_multirc_base_epoch_7.pth, AVG_AUROC: 0.742163385361915
+  21 - Model_Version: retriver_multirc_base_epoch_4.pth, AVG_AUROC: 0.7420454704155685
+  22 - Model_Version: retriver_multirc_base_epoch_5.pth, AVG_AUROC: 0.7364578731000301
+  23 - Model_Version: dual_retriver_multirc_base_epoch_5.pth, AVG_AUROC: 0.7356856492273156
+  24 - Model_Version: retriver_multirc_base_epoch_6.pth, AVG_AUROC: 0.7356802851288147
+  25 - Model_Version: dual_retriver_multirc_base_epoch_3.pth, AVG_AUROC: 0.7277739054699839
+  26 - Model_Version: retriver_multirc_base_epoch_3.pth, AVG_AUROC: 0.6878884369080448
+  27 - Model_Version: dual_retriver_multirc_base_epoch_2.pth, AVG_AUROC: 0.6787280484584406
+  28 - Model_Version: dual_retriver_multirc_base_epoch_1.pth, AVG_AUROC: 0.667412609630747
+  29 - Model_Version: retriver_multirc_base_epoch_2.pth, AVG_AUROC: 0.6509951831030263
+  30 - Model_Version: dual_retriver_multirc_PO_epoch_1.pth, AVG_AUROC: 0.6282050647246727
+  31 - Model_Version: dual_retriver_multirc_PO_epoch_5.pth, AVG_AUROC: 0.6221107346720092
+  32 - Model_Version: dual_retriver_multirc_PO_epoch_2.pth, AVG_AUROC: 0.6204857460984913
+  33 - Model_Version: dual_retriver_multirc_PO_epoch_3.pth, AVG_AUROC: 0.6186386394106983
+  34 - Model_Version: retriver_multirc_PO_epoch_1.pth, AVG_AUROC: 0.6183597538989698
+  35 - Model_Version: retriver_multirc_PO_epoch_2.pth, AVG_AUROC: 0.6178382302156812
+  36 - Model_Version: retriver_multirc_PO_epoch_4.pth, AVG_AUROC: 0.6115938799762329
+  37 - Model_Version: retriver_multirc_PO_epoch_5.pth, AVG_AUROC: 0.6088309566250742
+  38 - Model_Version: dual_retriver_multirc_PO_epoch_6.pth, AVG_AUROC: 0.6086691766838824
+  39 - Model_Version: retriver_multirc_PO_epoch_6.pth, AVG_AUROC: 0.6075939605964117
+  40 - Model_Version: dual_retriver_multirc_PO_epoch_9.pth, AVG_AUROC: 0.6053139172011721
+  41 - Model_Version: dual_retriver_multirc_PO_epoch_13.pth, AVG_AUROC: 0.6012346472518042
+  42 - Model_Version: retriver_multirc_PO_epoch_3.pth, AVG_AUROC: 0.5978032112223288
+  43 - Model_Version: dual_retriver_multirc_PO_epoch_7.pth, AVG_AUROC: 0.5971931799137682
+  44 - Model_Version: dual_retriver_multirc_PO_epoch_15.pth, AVG_AUROC: 0.596334670231729
+  45 - Model_Version: dual_retriver_multirc_PO_final.pth, AVG_AUROC: 0.596334670231729
+  46 - Model_Version: dual_retriver_multirc_PO_epoch_14.pth, AVG_AUROC: 0.5960450247827698
+  47 - Model_Version: retriver_multirc_PO_epoch_7.pth, AVG_AUROC: 0.5926871467312644
+  48 - Model_Version: dual_retriver_multirc_PO_epoch_4.pth, AVG_AUROC: 0.5918284624779722
+  49 - Model_Version: dual_retriver_multirc_PO_epoch_8.pth, AVG_AUROC: 0.5904888979031137
+  50 - Model_Version: retriver_multirc_PO_epoch_8.pth, AVG_AUROC: 0.5899781500271697
+  51 - Model_Version: retriver_multirc_PO_final.pth, AVG_AUROC: 0.5899781500271697
+  52 - Model_Version: dual_retriver_multirc_PO_epoch_11.pth, AVG_AUROC: 0.5895534499088421
+  53 - Model_Version: dual_retriver_multirc_PO_epoch_12.pth, AVG_AUROC: 0.5875999975877426
+  54 - Model_Version: dual_retriver_multirc_PO_epoch_10.pth, AVG_AUROC: 0.5836035378927534
+  55 - Model_Version: retriver_multirc_base_epoch_1.pth, AVG_AUROC: 0.570445340788478
+
+Cumulative Metric: AVG_AUPR
+  1 - Model_Version: retriver_multirc_TL_epoch_2.pth, AVG_AUPR: 0.5846495282797083
+  2 - Model_Version: dual_retriver_multirc_TL_epoch_4.pth, AVG_AUPR: 0.574491099051014
+  3 - Model_Version: dual_retriver_multirc_TL_epoch_5.pth, AVG_AUPR: 0.5684453162229369
+  4 - Model_Version: dual_retriver_multirc_TL_final.pth, AVG_AUPR: 0.5684453162229369
+  5 - Model_Version: dual_retriver_multirc_TL_epoch_3.pth, AVG_AUPR: 0.5663431831701063
+  6 - Model_Version: retriver_multirc_TL_epoch_5.pth, AVG_AUPR: 0.5599300996858452
+  7 - Model_Version: retriver_multirc_TL_final.pth, AVG_AUPR: 0.5599300996858452
+  8 - Model_Version: retriver_multirc_TL_epoch_1.pth, AVG_AUPR: 0.5591227581285977
+  9 - Model_Version: dual_retriver_multirc_TL_epoch_1.pth, AVG_AUPR: 0.5584018888981134
+  10 - Model_Version: retriver_multirc_TL_epoch_4.pth, AVG_AUPR: 0.5521103230642207
+  11 - Model_Version: dual_retriver_multirc_TL_epoch_2.pth, AVG_AUPR: 0.5467062838460789
+  12 - Model_Version: dual_retriver_multirc_base_epoch_6.pth, AVG_AUPR: 0.5360307547811268
+  13 - Model_Version: dual_retriver_multirc_base_epoch_4.pth, AVG_AUPR: 0.5317453811447915
+  14 - Model_Version: retriver_multirc_TL_epoch_3.pth, AVG_AUPR: 0.531114514818224
+  15 - Model_Version: dual_retriver_multirc_base_epoch_5.pth, AVG_AUPR: 0.5144910970895084
+  16 - Model_Version: dual_retriver_multirc_base_epoch_8.pth, AVG_AUPR: 0.5135045031050778
+  17 - Model_Version: dual_retriver_multirc_base_final.pth, AVG_AUPR: 0.5135045031050778
+  18 - Model_Version: dual_retriver_multirc_base_epoch_3.pth, AVG_AUPR: 0.5086568726736028
+  19 - Model_Version: retriver_multirc_base_epoch_8.pth, AVG_AUPR: 0.507266626504466
+  20 - Model_Version: retriver_multirc_base_final.pth, AVG_AUPR: 0.507266626504466
+  21 - Model_Version: retriver_multirc_base_epoch_7.pth, AVG_AUPR: 0.501735199772803
+  22 - Model_Version: dual_retriver_multirc_base_epoch_7.pth, AVG_AUPR: 0.49948814363010197
+  23 - Model_Version: retriver_multirc_base_epoch_4.pth, AVG_AUPR: 0.48820699551081775
+  24 - Model_Version: retriver_multirc_base_epoch_5.pth, AVG_AUPR: 0.45896445470153496
+  25 - Model_Version: retriver_multirc_base_epoch_6.pth, AVG_AUPR: 0.4482920518883944
+  26 - Model_Version: dual_retriver_multirc_base_epoch_2.pth, AVG_AUPR: 0.4272250300446497
+  27 - Model_Version: dual_retriver_multirc_PO_epoch_1.pth, AVG_AUPR: 0.39524198532518956
+  28 - Model_Version: retriver_multirc_PO_epoch_1.pth, AVG_AUPR: 0.39432901011897986
+  29 - Model_Version: retriver_multirc_base_epoch_3.pth, AVG_AUPR: 0.3930198257610042
+  30 - Model_Version: dual_retriver_multirc_PO_epoch_5.pth, AVG_AUPR: 0.39291420495774704
+  31 - Model_Version: dual_retriver_multirc_PO_epoch_6.pth, AVG_AUPR: 0.37752050230368484
+  32 - Model_Version: retriver_multirc_base_epoch_2.pth, AVG_AUPR: 0.3622390438527217
+  33 - Model_Version: dual_retriver_multirc_PO_epoch_13.pth, AVG_AUPR: 0.3586038488285798
+  34 - Model_Version: dual_retriver_multirc_PO_epoch_3.pth, AVG_AUPR: 0.35793296939676017
+  35 - Model_Version: retriver_multirc_PO_epoch_2.pth, AVG_AUPR: 0.35395843593467524
+  36 - Model_Version: retriver_multirc_PO_epoch_5.pth, AVG_AUPR: 0.35111371740603897
+  37 - Model_Version: retriver_multirc_PO_epoch_6.pth, AVG_AUPR: 0.34609544245035334
+  38 - Model_Version: dual_retriver_multirc_PO_epoch_9.pth, AVG_AUPR: 0.3457217632658709
+  39 - Model_Version: dual_retriver_multirc_PO_epoch_11.pth, AVG_AUPR: 0.3439651967252785
+  40 - Model_Version: dual_retriver_multirc_PO_epoch_4.pth, AVG_AUPR: 0.3424593265695067
+  41 - Model_Version: dual_retriver_multirc_PO_epoch_14.pth, AVG_AUPR: 0.340004218593863
+  42 - Model_Version: retriver_multirc_PO_epoch_3.pth, AVG_AUPR: 0.3400028348052927
+  43 - Model_Version: retriver_multirc_PO_epoch_4.pth, AVG_AUPR: 0.33875033909082186
+  44 - Model_Version: dual_retriver_multirc_PO_epoch_7.pth, AVG_AUPR: 0.3361078969678734
+  45 - Model_Version: dual_retriver_multirc_PO_epoch_15.pth, AVG_AUPR: 0.33533836830678343
+  46 - Model_Version: dual_retriver_multirc_PO_final.pth, AVG_AUPR: 0.33533836830678343
+  47 - Model_Version: dual_retriver_multirc_PO_epoch_12.pth, AVG_AUPR: 0.33513576049199617
+  48 - Model_Version: dual_retriver_multirc_base_epoch_1.pth, AVG_AUPR: 0.33469325064546146
+  49 - Model_Version: retriver_multirc_PO_epoch_7.pth, AVG_AUPR: 0.3346356178495031
+  50 - Model_Version: dual_retriver_multirc_PO_epoch_8.pth, AVG_AUPR: 0.33386096063122334
+  51 - Model_Version: dual_retriver_multirc_PO_epoch_10.pth, AVG_AUPR: 0.3327280161186547
+  52 - Model_Version: retriver_multirc_PO_epoch_8.pth, AVG_AUPR: 0.3305530669720804
+  53 - Model_Version: retriver_multirc_PO_final.pth, AVG_AUPR: 0.3305530669720804
+  54 - Model_Version: dual_retriver_multirc_PO_epoch_2.pth, AVG_AUPR: 0.326090995138685
+  55 - Model_Version: retriver_multirc_base_epoch_1.pth, AVG_AUPR: 0.2815888070507226
+
+Cumulative Metric: MAP@3
+  1 - Model_Version: dual_retriver_multirc_TL_epoch_3.pth, MAP@3: 0.6196581196581196
+  2 - Model_Version: dual_retriver_multirc_TL_epoch_5.pth, MAP@3: 0.6111111111111109
+  3 - Model_Version: dual_retriver_multirc_TL_final.pth, MAP@3: 0.6111111111111109
+  4 - Model_Version: dual_retriver_multirc_TL_epoch_4.pth, MAP@3: 0.6082621082621081
+  5 - Model_Version: retriver_multirc_TL_epoch_2.pth, MAP@3: 0.6025641025641024
+  6 - Model_Version: dual_retriver_multirc_TL_epoch_1.pth, MAP@3: 0.6025641025641024
+  7 - Model_Version: dual_retriver_multirc_TL_epoch_2.pth, MAP@3: 0.5854700854700854
+  8 - Model_Version: retriver_multirc_TL_epoch_4.pth, MAP@3: 0.5826210826210825
+  9 - Model_Version: retriver_multirc_TL_epoch_1.pth, MAP@3: 0.5783475783475783
+  10 - Model_Version: retriver_multirc_TL_epoch_5.pth, MAP@3: 0.5740740740740741
+  11 - Model_Version: retriver_multirc_TL_final.pth, MAP@3: 0.5740740740740741
+  12 - Model_Version: dual_retriver_multirc_base_epoch_6.pth, MAP@3: 0.5527065527065527
+  13 - Model_Version: retriver_multirc_TL_epoch_3.pth, MAP@3: 0.5498575498575498
+  14 - Model_Version: dual_retriver_multirc_base_epoch_4.pth, MAP@3: 0.5484330484330483
+  15 - Model_Version: dual_retriver_multirc_base_epoch_3.pth, MAP@3: 0.5356125356125356
+  16 - Model_Version: dual_retriver_multirc_base_epoch_8.pth, MAP@3: 0.5313390313390313
+  17 - Model_Version: dual_retriver_multirc_base_final.pth, MAP@3: 0.5313390313390313
+  18 - Model_Version: dual_retriver_multirc_base_epoch_5.pth, MAP@3: 0.5227920227920227
+  19 - Model_Version: dual_retriver_multirc_base_epoch_7.pth, MAP@3: 0.517094017094017
+  20 - Model_Version: retriver_multirc_base_epoch_8.pth, MAP@3: 0.5085470085470084
+  21 - Model_Version: retriver_multirc_base_final.pth, MAP@3: 0.5085470085470084
+  22 - Model_Version: retriver_multirc_base_epoch_4.pth, MAP@3: 0.5014245014245015
+  23 - Model_Version: retriver_multirc_base_epoch_7.pth, MAP@3: 0.497150997150997
+  24 - Model_Version: retriver_multirc_base_epoch_5.pth, MAP@3: 0.4715099715099716
+  25 - Model_Version: retriver_multirc_base_epoch_6.pth, MAP@3: 0.4686609686609688
+  26 - Model_Version: dual_retriver_multirc_base_epoch_2.pth, MAP@3: 0.43732193732193747
+  27 - Model_Version: dual_retriver_multirc_PO_epoch_5.pth, MAP@3: 0.3945868945868946
+  28 - Model_Version: retriver_multirc_base_epoch_3.pth, MAP@3: 0.3945868945868945
+  29 - Model_Version: dual_retriver_multirc_PO_epoch_1.pth, MAP@3: 0.38888888888888884
+  30 - Model_Version: retriver_multirc_PO_epoch_1.pth, MAP@3: 0.38746438746438744
+  31 - Model_Version: dual_retriver_multirc_PO_epoch_6.pth, MAP@3: 0.3774928774928775
+  32 - Model_Version: dual_retriver_multirc_PO_epoch_13.pth, MAP@3: 0.3475783475783475
+  33 - Model_Version: dual_retriver_multirc_PO_epoch_3.pth, MAP@3: 0.34472934472934474
+  34 - Model_Version: dual_retriver_multirc_PO_epoch_9.pth, MAP@3: 0.33903133903133903
+  35 - Model_Version: retriver_multirc_PO_epoch_2.pth, MAP@3: 0.33618233618233617
+  36 - Model_Version: dual_retriver_multirc_PO_epoch_11.pth, MAP@3: 0.33618233618233617
+  37 - Model_Version: dual_retriver_multirc_PO_epoch_4.pth, MAP@3: 0.33618233618233606
+  38 - Model_Version: dual_retriver_multirc_PO_epoch_10.pth, MAP@3: 0.33475783475783477
+  39 - Model_Version: dual_retriver_multirc_PO_epoch_14.pth, MAP@3: 0.3333333333333333
+  40 - Model_Version: retriver_multirc_PO_epoch_5.pth, MAP@3: 0.3319088319088318
+  41 - Model_Version: retriver_multirc_PO_epoch_6.pth, MAP@3: 0.3319088319088318
+  42 - Model_Version: retriver_multirc_PO_epoch_3.pth, MAP@3: 0.3276353276353276
+  43 - Model_Version: dual_retriver_multirc_PO_epoch_7.pth, MAP@3: 0.3276353276353276
+  44 - Model_Version: dual_retriver_multirc_PO_epoch_15.pth, MAP@3: 0.3233618233618233
+  45 - Model_Version: dual_retriver_multirc_PO_final.pth, MAP@3: 0.3233618233618233
+  46 - Model_Version: retriver_multirc_base_epoch_2.pth, MAP@3: 0.32193732193732194
+  47 - Model_Version: dual_retriver_multirc_base_epoch_1.pth, MAP@3: 0.31908831908831903
+  48 - Model_Version: dual_retriver_multirc_PO_epoch_12.pth, MAP@3: 0.3176638176638176
+  49 - Model_Version: retriver_multirc_PO_epoch_4.pth, MAP@3: 0.31623931623931617
+  50 - Model_Version: dual_retriver_multirc_PO_epoch_8.pth, MAP@3: 0.31196581196581197
+  51 - Model_Version: retriver_multirc_PO_epoch_7.pth, MAP@3: 0.3034188034188034
+  52 - Model_Version: retriver_multirc_PO_epoch_8.pth, MAP@3: 0.3034188034188034
+  53 - Model_Version: retriver_multirc_PO_final.pth, MAP@3: 0.3034188034188034
+  54 - Model_Version: dual_retriver_multirc_PO_epoch_2.pth, MAP@3: 0.2934472934472934
+  55 - Model_Version: retriver_multirc_base_epoch_1.pth, MAP@3: 0.24074074074074067
+
+Cumulative Metric: MP@1
+  1 - Model_Version: retriver_multirc_TL_epoch_2.pth, MP@1: 0.7948717948717948
+  2 - Model_Version: retriver_multirc_TL_epoch_4.pth, MP@1: 0.7692307692307693
+  3 - Model_Version: dual_retriver_multirc_TL_epoch_3.pth, MP@1: 0.7692307692307693
+  4 - Model_Version: retriver_multirc_TL_epoch_5.pth, MP@1: 0.7435897435897436
+  5 - Model_Version: retriver_multirc_TL_final.pth, MP@1: 0.7435897435897436
+  6 - Model_Version: dual_retriver_multirc_TL_epoch_4.pth, MP@1: 0.7435897435897436
+  7 - Model_Version: dual_retriver_multirc_TL_epoch_5.pth, MP@1: 0.7435897435897436
+  8 - Model_Version: dual_retriver_multirc_TL_final.pth, MP@1: 0.7435897435897436
+  9 - Model_Version: retriver_multirc_TL_epoch_1.pth, MP@1: 0.717948717948718
+  10 - Model_Version: retriver_multirc_TL_epoch_3.pth, MP@1: 0.717948717948718
+  11 - Model_Version: dual_retriver_multirc_TL_epoch_1.pth, MP@1: 0.6923076923076923
+  12 - Model_Version: dual_retriver_multirc_TL_epoch_2.pth, MP@1: 0.6923076923076923
+  13 - Model_Version: dual_retriver_multirc_base_epoch_6.pth, MP@1: 0.6666666666666666
+  14 - Model_Version: dual_retriver_multirc_base_epoch_4.pth, MP@1: 0.6410256410256411
+  15 - Model_Version: dual_retriver_multirc_base_epoch_3.pth, MP@1: 0.6153846153846154
+  16 - Model_Version: dual_retriver_multirc_base_epoch_8.pth, MP@1: 0.6153846153846154
+  17 - Model_Version: dual_retriver_multirc_base_final.pth, MP@1: 0.6153846153846154
+  18 - Model_Version: retriver_multirc_base_epoch_7.pth, MP@1: 0.5897435897435898
+  19 - Model_Version: retriver_multirc_base_epoch_8.pth, MP@1: 0.5897435897435898
+  20 - Model_Version: retriver_multirc_base_final.pth, MP@1: 0.5897435897435898
+  21 - Model_Version: dual_retriver_multirc_base_epoch_5.pth, MP@1: 0.5897435897435898
+  22 - Model_Version: dual_retriver_multirc_base_epoch_7.pth, MP@1: 0.5897435897435898
+  23 - Model_Version: retriver_multirc_base_epoch_4.pth, MP@1: 0.5384615384615384
+  24 - Model_Version: retriver_multirc_base_epoch_5.pth, MP@1: 0.48717948717948717
+  25 - Model_Version: dual_retriver_multirc_PO_epoch_5.pth, MP@1: 0.48717948717948717
+  26 - Model_Version: retriver_multirc_base_epoch_6.pth, MP@1: 0.46153846153846156
+  27 - Model_Version: dual_retriver_multirc_base_epoch_2.pth, MP@1: 0.46153846153846156
+  28 - Model_Version: retriver_multirc_PO_epoch_1.pth, MP@1: 0.4358974358974359
+  29 - Model_Version: dual_retriver_multirc_PO_epoch_1.pth, MP@1: 0.4358974358974359
+  30 - Model_Version: dual_retriver_multirc_PO_epoch_6.pth, MP@1: 0.4358974358974359
+  31 - Model_Version: retriver_multirc_base_epoch_3.pth, MP@1: 0.41025641025641024
+  32 - Model_Version: retriver_multirc_PO_epoch_5.pth, MP@1: 0.41025641025641024
+  33 - Model_Version: dual_retriver_multirc_PO_epoch_13.pth, MP@1: 0.41025641025641024
+  34 - Model_Version: retriver_multirc_PO_epoch_6.pth, MP@1: 0.38461538461538464
+  35 - Model_Version: retriver_multirc_PO_epoch_7.pth, MP@1: 0.38461538461538464
+  36 - Model_Version: dual_retriver_multirc_PO_epoch_11.pth, MP@1: 0.38461538461538464
+  37 - Model_Version: dual_retriver_multirc_PO_epoch_4.pth, MP@1: 0.38461538461538464
+  38 - Model_Version: retriver_multirc_PO_epoch_2.pth, MP@1: 0.358974358974359
+  39 - Model_Version: retriver_multirc_PO_epoch_3.pth, MP@1: 0.358974358974359
+  40 - Model_Version: retriver_multirc_PO_epoch_4.pth, MP@1: 0.358974358974359
+  41 - Model_Version: retriver_multirc_PO_epoch_8.pth, MP@1: 0.358974358974359
+  42 - Model_Version: retriver_multirc_PO_final.pth, MP@1: 0.358974358974359
+  43 - Model_Version: dual_retriver_multirc_PO_epoch_10.pth, MP@1: 0.358974358974359
+  44 - Model_Version: dual_retriver_multirc_PO_epoch_12.pth, MP@1: 0.358974358974359
+  45 - Model_Version: dual_retriver_multirc_PO_epoch_14.pth, MP@1: 0.358974358974359
+  46 - Model_Version: dual_retriver_multirc_PO_epoch_15.pth, MP@1: 0.358974358974359
+  47 - Model_Version: dual_retriver_multirc_PO_epoch_3.pth, MP@1: 0.358974358974359
+  48 - Model_Version: dual_retriver_multirc_PO_epoch_7.pth, MP@1: 0.358974358974359
+  49 - Model_Version: dual_retriver_multirc_PO_epoch_8.pth, MP@1: 0.358974358974359
+  50 - Model_Version: dual_retriver_multirc_PO_epoch_9.pth, MP@1: 0.358974358974359
+  51 - Model_Version: dual_retriver_multirc_PO_final.pth, MP@1: 0.358974358974359
+  52 - Model_Version: retriver_multirc_base_epoch_2.pth, MP@1: 0.3333333333333333
+  53 - Model_Version: dual_retriver_multirc_base_epoch_1.pth, MP@1: 0.28205128205128205
+  54 - Model_Version: dual_retriver_multirc_PO_epoch_2.pth, MP@1: 0.28205128205128205
+  55 - Model_Version: retriver_multirc_base_epoch_1.pth, MP@1: 0.20512820512820512
+
+Cumulative Metric: MP@3
+  1 - Model_Version: dual_retriver_multirc_TL_epoch_1.pth, MP@3: 0.5641025641025641
+  2 - Model_Version: dual_retriver_multirc_TL_epoch_2.pth, MP@3: 0.5512820512820513
+  3 - Model_Version: dual_retriver_multirc_TL_epoch_4.pth, MP@3: 0.5427350427350428
+  4 - Model_Version: dual_retriver_multirc_TL_epoch_3.pth, MP@3: 0.5384615384615385
+  5 - Model_Version: dual_retriver_multirc_TL_epoch_5.pth, MP@3: 0.5384615384615385
+  6 - Model_Version: dual_retriver_multirc_TL_final.pth, MP@3: 0.5384615384615385
+  7 - Model_Version: dual_retriver_multirc_base_epoch_3.pth, MP@3: 0.5299145299145298
+  8 - Model_Version: retriver_multirc_base_epoch_4.pth, MP@3: 0.5170940170940171
+  9 - Model_Version: dual_retriver_multirc_base_epoch_6.pth, MP@3: 0.5170940170940171
+  10 - Model_Version: dual_retriver_multirc_base_epoch_4.pth, MP@3: 0.517094017094017
+  11 - Model_Version: retriver_multirc_TL_epoch_1.pth, MP@3: 0.5042735042735043
+  12 - Model_Version: dual_retriver_multirc_base_epoch_5.pth, MP@3: 0.5042735042735043
+  13 - Model_Version: dual_retriver_multirc_base_epoch_8.pth, MP@3: 0.5042735042735043
+  14 - Model_Version: dual_retriver_multirc_base_final.pth, MP@3: 0.5042735042735043
+  15 - Model_Version: retriver_multirc_TL_epoch_2.pth, MP@3: 0.5
+  16 - Model_Version: retriver_multirc_base_epoch_6.pth, MP@3: 0.4957264957264958
+  17 - Model_Version: retriver_multirc_TL_epoch_4.pth, MP@3: 0.4914529914529916
+  18 - Model_Version: retriver_multirc_base_epoch_5.pth, MP@3: 0.4914529914529915
+  19 - Model_Version: retriver_multirc_TL_epoch_5.pth, MP@3: 0.4914529914529915
+  20 - Model_Version: retriver_multirc_TL_final.pth, MP@3: 0.4914529914529915
+  21 - Model_Version: dual_retriver_multirc_base_epoch_7.pth, MP@3: 0.4871794871794873
+  22 - Model_Version: retriver_multirc_base_epoch_8.pth, MP@3: 0.48717948717948717
+  23 - Model_Version: retriver_multirc_base_final.pth, MP@3: 0.48717948717948717
+  24 - Model_Version: retriver_multirc_TL_epoch_3.pth, MP@3: 0.47008547008547025
+  25 - Model_Version: retriver_multirc_base_epoch_7.pth, MP@3: 0.4658119658119658
+  26 - Model_Version: dual_retriver_multirc_base_epoch_2.pth, MP@3: 0.4401709401709403
+  27 - Model_Version: retriver_multirc_base_epoch_3.pth, MP@3: 0.4401709401709402
+  28 - Model_Version: dual_retriver_multirc_PO_epoch_1.pth, MP@3: 0.39743589743589747
+  29 - Model_Version: retriver_multirc_PO_epoch_1.pth, MP@3: 0.39316239316239315
+  30 - Model_Version: dual_retriver_multirc_base_epoch_1.pth, MP@3: 0.3675213675213676
+  31 - Model_Version: dual_retriver_multirc_PO_epoch_3.pth, MP@3: 0.3547008547008548
+  32 - Model_Version: retriver_multirc_PO_epoch_2.pth, MP@3: 0.341880341880342
+  33 - Model_Version: dual_retriver_multirc_PO_epoch_6.pth, MP@3: 0.33760683760683763
+  34 - Model_Version: retriver_multirc_base_epoch_2.pth, MP@3: 0.3376068376068376
+  35 - Model_Version: dual_retriver_multirc_PO_epoch_7.pth, MP@3: 0.3290598290598291
+  36 - Model_Version: dual_retriver_multirc_PO_epoch_4.pth, MP@3: 0.32905982905982906
+  37 - Model_Version: dual_retriver_multirc_PO_epoch_9.pth, MP@3: 0.32478632478632485
+  38 - Model_Version: dual_retriver_multirc_PO_epoch_13.pth, MP@3: 0.3247863247863248
+  39 - Model_Version: dual_retriver_multirc_PO_epoch_5.pth, MP@3: 0.3247863247863248
+  40 - Model_Version: dual_retriver_multirc_PO_epoch_2.pth, MP@3: 0.31623931623931634
+  41 - Model_Version: retriver_multirc_PO_epoch_3.pth, MP@3: 0.3162393162393163
+  42 - Model_Version: dual_retriver_multirc_PO_epoch_10.pth, MP@3: 0.311965811965812
+  43 - Model_Version: dual_retriver_multirc_PO_epoch_12.pth, MP@3: 0.311965811965812
+  44 - Model_Version: dual_retriver_multirc_PO_epoch_14.pth, MP@3: 0.30769230769230776
+  45 - Model_Version: dual_retriver_multirc_PO_epoch_8.pth, MP@3: 0.30769230769230776
+  46 - Model_Version: retriver_multirc_PO_epoch_5.pth, MP@3: 0.3034188034188035
+  47 - Model_Version: retriver_multirc_PO_epoch_6.pth, MP@3: 0.3034188034188035
+  48 - Model_Version: dual_retriver_multirc_PO_epoch_11.pth, MP@3: 0.30341880341880345
+  49 - Model_Version: retriver_multirc_PO_epoch_4.pth, MP@3: 0.294871794871795
+  50 - Model_Version: dual_retriver_multirc_PO_epoch_15.pth, MP@3: 0.2905982905982906
+  51 - Model_Version: dual_retriver_multirc_PO_final.pth, MP@3: 0.2905982905982906
+  52 - Model_Version: retriver_multirc_PO_epoch_7.pth, MP@3: 0.2820512820512821
+  53 - Model_Version: retriver_multirc_PO_epoch_8.pth, MP@3: 0.2820512820512821
+  54 - Model_Version: retriver_multirc_PO_final.pth, MP@3: 0.2820512820512821
+  55 - Model_Version: retriver_multirc_base_epoch_1.pth, MP@3: 0.27350427350427353
+
+Cumulative Metric: Eval@0.95
+  1 - Model_Version: dual_retriver_multirc_base_epoch_6.pth, Eval@0.95: 0.9230769230769231
+  2 - Model_Version: dual_retriver_multirc_base_epoch_8.pth, Eval@0.95: 0.9230769230769231
+  3 - Model_Version: dual_retriver_multirc_base_final.pth, Eval@0.95: 0.9230769230769231
+  4 - Model_Version: dual_retriver_multirc_TL_epoch_3.pth, Eval@0.95: 0.9230769230769231
+  5 - Model_Version: retriver_multirc_base_epoch_6.pth, Eval@0.95: 0.8974358974358975
+  6 - Model_Version: retriver_multirc_TL_epoch_2.pth, Eval@0.95: 0.8974358974358975
+  7 - Model_Version: retriver_multirc_TL_epoch_3.pth, Eval@0.95: 0.8974358974358975
+  8 - Model_Version: dual_retriver_multirc_base_epoch_4.pth, Eval@0.95: 0.8974358974358975
+  9 - Model_Version: dual_retriver_multirc_base_epoch_5.pth, Eval@0.95: 0.8974358974358975
+  10 - Model_Version: dual_retriver_multirc_base_epoch_7.pth, Eval@0.95: 0.8974358974358975
+  11 - Model_Version: dual_retriver_multirc_TL_epoch_1.pth, Eval@0.95: 0.8974358974358975
+  12 - Model_Version: dual_retriver_multirc_TL_epoch_5.pth, Eval@0.95: 0.8974358974358975
+  13 - Model_Version: dual_retriver_multirc_TL_final.pth, Eval@0.95: 0.8974358974358975
+  14 - Model_Version: retriver_multirc_base_epoch_4.pth, Eval@0.95: 0.8717948717948718
+  15 - Model_Version: retriver_multirc_base_epoch_8.pth, Eval@0.95: 0.8717948717948718
+  16 - Model_Version: retriver_multirc_base_final.pth, Eval@0.95: 0.8717948717948718
+  17 - Model_Version: retriver_multirc_TL_epoch_1.pth, Eval@0.95: 0.8717948717948718
+  18 - Model_Version: dual_retriver_multirc_base_epoch_3.pth, Eval@0.95: 0.8717948717948718
+  19 - Model_Version: dual_retriver_multirc_TL_epoch_2.pth, Eval@0.95: 0.8717948717948718
+  20 - Model_Version: retriver_multirc_base_epoch_7.pth, Eval@0.95: 0.8461538461538461
+  21 - Model_Version: retriver_multirc_TL_epoch_4.pth, Eval@0.95: 0.8461538461538461
+  22 - Model_Version: retriver_multirc_TL_epoch_5.pth, Eval@0.95: 0.8461538461538461
+  23 - Model_Version: retriver_multirc_TL_final.pth, Eval@0.95: 0.8461538461538461
+  24 - Model_Version: dual_retriver_multirc_TL_epoch_4.pth, Eval@0.95: 0.8461538461538461
+  25 - Model_Version: retriver_multirc_base_epoch_5.pth, Eval@0.95: 0.8205128205128205
+  26 - Model_Version: retriver_multirc_base_epoch_3.pth, Eval@0.95: 0.7948717948717948
+  27 - Model_Version: dual_retriver_multirc_base_epoch_2.pth, Eval@0.95: 0.7948717948717948
+  28 - Model_Version: dual_retriver_multirc_base_epoch_1.pth, Eval@0.95: 0.717948717948718
+  29 - Model_Version: dual_retriver_multirc_PO_epoch_5.pth, Eval@0.95: 0.717948717948718
+  30 - Model_Version: retriver_multirc_PO_epoch_1.pth, Eval@0.95: 0.6923076923076923
+  31 - Model_Version: dual_retriver_multirc_PO_epoch_1.pth, Eval@0.95: 0.6923076923076923
+  32 - Model_Version: dual_retriver_multirc_PO_epoch_7.pth, Eval@0.95: 0.6923076923076923
+  33 - Model_Version: retriver_multirc_PO_epoch_3.pth, Eval@0.95: 0.6666666666666666
+  34 - Model_Version: retriver_multirc_PO_epoch_5.pth, Eval@0.95: 0.6666666666666666
+  35 - Model_Version: retriver_multirc_PO_epoch_6.pth, Eval@0.95: 0.6666666666666666
+  36 - Model_Version: dual_retriver_multirc_PO_epoch_13.pth, Eval@0.95: 0.6666666666666666
+  37 - Model_Version: dual_retriver_multirc_PO_epoch_2.pth, Eval@0.95: 0.6666666666666666
+  38 - Model_Version: dual_retriver_multirc_PO_epoch_3.pth, Eval@0.95: 0.6666666666666666
+  39 - Model_Version: dual_retriver_multirc_PO_epoch_4.pth, Eval@0.95: 0.6666666666666666
+  40 - Model_Version: dual_retriver_multirc_PO_epoch_6.pth, Eval@0.95: 0.6666666666666666
+  41 - Model_Version: dual_retriver_multirc_PO_epoch_9.pth, Eval@0.95: 0.6666666666666666
+  42 - Model_Version: retriver_multirc_PO_epoch_4.pth, Eval@0.95: 0.6410256410256411
+  43 - Model_Version: dual_retriver_multirc_PO_epoch_10.pth, Eval@0.95: 0.6410256410256411
+  44 - Model_Version: dual_retriver_multirc_PO_epoch_12.pth, Eval@0.95: 0.6410256410256411
+  45 - Model_Version: dual_retriver_multirc_PO_epoch_14.pth, Eval@0.95: 0.6410256410256411
+  46 - Model_Version: retriver_multirc_base_epoch_2.pth, Eval@0.95: 0.6153846153846154
+  47 - Model_Version: retriver_multirc_PO_epoch_2.pth, Eval@0.95: 0.6153846153846154
+  48 - Model_Version: dual_retriver_multirc_PO_epoch_11.pth, Eval@0.95: 0.6153846153846154
+  49 - Model_Version: dual_retriver_multirc_PO_epoch_15.pth, Eval@0.95: 0.6153846153846154
+  50 - Model_Version: dual_retriver_multirc_PO_epoch_8.pth, Eval@0.95: 0.6153846153846154
+  51 - Model_Version: dual_retriver_multirc_PO_final.pth, Eval@0.95: 0.6153846153846154
+  52 - Model_Version: retriver_multirc_PO_epoch_7.pth, Eval@0.95: 0.5897435897435898
+  53 - Model_Version: retriver_multirc_base_epoch_1.pth, Eval@0.95: 0.5641025641025641
+  54 - Model_Version: retriver_multirc_PO_epoch_8.pth, Eval@0.95: 0.5384615384615384
+  55 - Model_Version: retriver_multirc_PO_final.pth, Eval@0.95: 0.5384615384615384
+
+Overall Cumulative Ranking
+  1 - Model_Version: dual_retriver_multirc_TL_epoch_3.pth, Total Rank: 22
+  2 - Model_Version: retriver_multirc_TL_epoch_2.pth, Total Rank: 29
+  3 - Model_Version: dual_retriver_multirc_TL_epoch_5.pth, Total Rank: 32
+  4 - Model_Version: dual_retriver_multirc_TL_final.pth, Total Rank: 38
+  5 - Model_Version: dual_retriver_multirc_TL_epoch_4.pth, Total Rank: 46
+  6 - Model_Version: dual_retriver_multirc_TL_epoch_1.pth, Total Rank: 46
+  7 - Model_Version: dual_retriver_multirc_TL_epoch_2.pth, Total Rank: 53
+  8 - Model_Version: dual_retriver_multirc_base_epoch_6.pth, Total Rank: 53
+  9 - Model_Version: retriver_multirc_TL_epoch_1.pth, Total Rank: 70
+  10 - Model_Version: retriver_multirc_TL_epoch_5.pth, Total Rank: 71
+  11 - Model_Version: dual_retriver_multirc_base_epoch_4.pth, Total Rank: 76
+  12 - Model_Version: retriver_multirc_TL_epoch_3.pth, Total Rank: 77
+  13 - Model_Version: retriver_multirc_TL_final.pth, Total Rank: 77
+  14 - Model_Version: dual_retriver_multirc_base_epoch_8.pth, Total Rank: 77
+  15 - Model_Version: retriver_multirc_TL_epoch_4.pth, Total Rank: 77
+  16 - Model_Version: dual_retriver_multirc_base_final.pth, Total Rank: 83
+  17 - Model_Version: dual_retriver_multirc_base_epoch_5.pth, Total Rank: 98
+  18 - Model_Version: dual_retriver_multirc_base_epoch_3.pth, Total Rank: 98
+  19 - Model_Version: retriver_multirc_base_epoch_8.pth, Total Rank: 107
+  20 - Model_Version: retriver_multirc_base_epoch_4.pth, Total Rank: 111
+  21 - Model_Version: dual_retriver_multirc_base_epoch_7.pth, Total Rank: 112
+  22 - Model_Version: retriver_multirc_base_final.pth, Total Rank: 113
+  23 - Model_Version: retriver_multirc_base_epoch_6.pth, Total Rank: 121
+  24 - Model_Version: retriver_multirc_base_epoch_7.pth, Total Rank: 127
+  25 - Model_Version: retriver_multirc_base_epoch_5.pth, Total Rank: 137
+  26 - Model_Version: dual_retriver_multirc_base_epoch_2.pth, Total Rank: 159
+  27 - Model_Version: retriver_multirc_base_epoch_3.pth, Total Rank: 167
+  28 - Model_Version: dual_retriver_multirc_PO_epoch_1.pth, Total Rank: 174
+  29 - Model_Version: retriver_multirc_PO_epoch_1.pth, Total Rank: 179
+  30 - Model_Version: dual_retriver_multirc_PO_epoch_5.pth, Total Rank: 181
+  31 - Model_Version: dual_retriver_multirc_PO_epoch_6.pth, Total Rank: 203
+  32 - Model_Version: dual_retriver_multirc_PO_epoch_13.pth, Total Rank: 213
+  33 - Model_Version: dual_retriver_multirc_PO_epoch_3.pth, Total Rank: 216
+  34 - Model_Version: retriver_multirc_PO_epoch_2.pth, Total Rank: 222
+  35 - Model_Version: retriver_multirc_PO_epoch_5.pth, Total Rank: 225
+  36 - Model_Version: retriver_multirc_PO_epoch_6.pth, Total Rank: 233
+  37 - Model_Version: dual_retriver_multirc_base_epoch_1.pth, Total Rank: 234
+  38 - Model_Version: dual_retriver_multirc_PO_epoch_4.pth, Total Rank: 237
+  39 - Model_Version: retriver_multirc_base_epoch_2.pth, Total Rank: 239
+  40 - Model_Version: retriver_multirc_PO_epoch_3.pth, Total Rank: 239
+  41 - Model_Version: dual_retriver_multirc_PO_epoch_9.pth, Total Rank: 240
+  42 - Model_Version: dual_retriver_multirc_PO_epoch_7.pth, Total Rank: 245
+  43 - Model_Version: retriver_multirc_PO_epoch_4.pth, Total Rank: 259
+  44 - Model_Version: dual_retriver_multirc_PO_epoch_11.pth, Total Rank: 259
+  45 - Model_Version: dual_retriver_multirc_PO_epoch_14.pth, Total Rank: 260
+  46 - Model_Version: dual_retriver_multirc_PO_epoch_2.pth, Total Rank: 271
+  47 - Model_Version: dual_retriver_multirc_PO_epoch_10.pth, Total Rank: 271
+  48 - Model_Version: dual_retriver_multirc_PO_epoch_15.pth, Total Rank: 278
+  49 - Model_Version: dual_retriver_multirc_PO_epoch_12.pth, Total Rank: 279
+  50 - Model_Version: retriver_multirc_PO_epoch_7.pth, Total Rank: 286
+  51 - Model_Version: dual_retriver_multirc_PO_final.pth, Total Rank: 289
+  52 - Model_Version: dual_retriver_multirc_PO_epoch_8.pth, Total Rank: 293
+  53 - Model_Version: retriver_multirc_PO_epoch_8.pth, Total Rank: 302
+  54 - Model_Version: retriver_multirc_PO_final.pth, Total Rank: 308
+  55 - Model_Version: retriver_multirc_base_epoch_1.pth, Total Rank: 328
+
+Best Models of Each Category
+  Model: retriver_multirc_base, Best Version: epoch_8.pth, Total Rank: 107
+  Model: retriver_multirc_TL, Best Version: epoch_2.pth, Total Rank: 29
+  Model: retriver_multirc_PO, Best Version: epoch_1.pth, Total Rank: 179
+  Model: dual_retriver_multirc_base, Best Version: epoch_6.pth, Total Rank: 53
+  Model: dual_retriver_multirc_TL, Best Version: epoch_3.pth, Total Rank: 22
+  Model: dual_retriver_multirc_PO, Best Version: epoch_1.pth, Total Rank: 174
+
+Evaluating best model retriver_multirc_base version epoch_8.pth on test set
+    Average AUROC: 0.7532629730304149
+    Average AUPR: 0.5430204673663976
+    MAP@3: 0.5801033591731267
+    MP@1: 0.6511627906976745
+    MP@3: 0.5658914728682171
+    Eval results @ 0.95: 0.9069767441860465
+
+Evaluating best model retriver_multirc_TL version epoch_2.pth on test set
+    Average AUROC: 0.7842250342250341
+    Average AUPR: 0.590897765025672
+    MAP@3: 0.6227390180878554
+    MP@1: 0.6976744186046512
+    MP@3: 0.6124031007751939
+    Eval results @ 0.95: 0.8837209302325582
+
+Evaluating best model retriver_multirc_PO version epoch_1.pth on test set
+    Average AUROC: 0.6340897904851394
+    Average AUPR: 0.3997616670581786
+    MAP@3: 0.3772609819121447
+    MP@1: 0.4186046511627907
+    MP@3: 0.37596899224806196
+    Eval results @ 0.95: 0.6046511627906976
+
+Evaluating best model dual_retriver_multirc_base version epoch_6.pth on test set
+    Average AUROC: 0.7304337781081967
+    Average AUPR: 0.5363519205815718
+    MAP@3: 0.5633074935400517
+    MP@1: 0.627906976744186
+    MP@3: 0.5503875968992248
+    Eval results @ 0.95: 0.8372093023255814
+
+Evaluating best model dual_retriver_multirc_TL version epoch_3.pth on test set
+    Average AUROC: 0.7809875740108297
+    Average AUPR: 0.5463668518174333
+    MAP@3: 0.5762273901808787
+    MP@1: 0.5813953488372093
+    MP@3: 0.6240310077519381
+    Eval results @ 0.95: 0.9302325581395349
+
+Evaluating best model dual_retriver_multirc_PO version epoch_1.pth on test set
+    Average AUROC: 0.6417790220115802
+    Average AUPR: 0.4009481985499426
+    MAP@3: 0.40310077519379833
+    MP@1: 0.4186046511627907
+    MP@3: 0.4186046511627907
+    Eval results @ 0.95: 0.7209302325581395
+
+Cumulative Metric: AVG_AUROC
+  1 - Model_Version: retriver_multirc_TL, AVG_AUROC: 0.7842250342250341
+  2 - Model_Version: dual_retriver_multirc_TL, AVG_AUROC: 0.7809875740108297
+  3 - Model_Version: retriver_multirc_base, AVG_AUROC: 0.7532629730304149
+  4 - Model_Version: dual_retriver_multirc_base, AVG_AUROC: 0.7304337781081967
+  5 - Model_Version: dual_retriver_multirc_PO, AVG_AUROC: 0.6417790220115802
+  6 - Model_Version: retriver_multirc_PO, AVG_AUROC: 0.6340897904851394
+
+Cumulative Metric: AVG_AUPR
+  1 - Model_Version: retriver_multirc_TL, AVG_AUPR: 0.590897765025672
+  2 - Model_Version: dual_retriver_multirc_TL, AVG_AUPR: 0.5463668518174333
+  3 - Model_Version: retriver_multirc_base, AVG_AUPR: 0.5430204673663976
+  4 - Model_Version: dual_retriver_multirc_base, AVG_AUPR: 0.5363519205815718
+  5 - Model_Version: dual_retriver_multirc_PO, AVG_AUPR: 0.4009481985499426
+  6 - Model_Version: retriver_multirc_PO, AVG_AUPR: 0.3997616670581786
+
+Cumulative Metric: MAP@3
+  1 - Model_Version: retriver_multirc_TL, MAP@3: 0.6227390180878554
+  2 - Model_Version: retriver_multirc_base, MAP@3: 0.5801033591731267
+  3 - Model_Version: dual_retriver_multirc_TL, MAP@3: 0.5762273901808787
+  4 - Model_Version: dual_retriver_multirc_base, MAP@3: 0.5633074935400517
+  5 - Model_Version: dual_retriver_multirc_PO, MAP@3: 0.40310077519379833
+  6 - Model_Version: retriver_multirc_PO, MAP@3: 0.3772609819121447
+
+Cumulative Metric: MP@1
+  1 - Model_Version: retriver_multirc_TL, MP@1: 0.6976744186046512
+  2 - Model_Version: retriver_multirc_base, MP@1: 0.6511627906976745
+  3 - Model_Version: dual_retriver_multirc_base, MP@1: 0.627906976744186
+  4 - Model_Version: dual_retriver_multirc_TL, MP@1: 0.5813953488372093
+  5 - Model_Version: retriver_multirc_PO, MP@1: 0.4186046511627907
+  6 - Model_Version: dual_retriver_multirc_PO, MP@1: 0.4186046511627907
+
+Cumulative Metric: MP@3
+  1 - Model_Version: dual_retriver_multirc_TL, MP@3: 0.6240310077519381
+  2 - Model_Version: retriver_multirc_TL, MP@3: 0.6124031007751939
+  3 - Model_Version: retriver_multirc_base, MP@3: 0.5658914728682171
+  4 - Model_Version: dual_retriver_multirc_base, MP@3: 0.5503875968992248
+  5 - Model_Version: dual_retriver_multirc_PO, MP@3: 0.4186046511627907
+  6 - Model_Version: retriver_multirc_PO, MP@3: 0.37596899224806196
+
+Cumulative Metric: Eval@0.95
+  1 - Model_Version: dual_retriver_multirc_TL, Eval@0.95: 0.9302325581395349
+  2 - Model_Version: retriver_multirc_base, Eval@0.95: 0.9069767441860465
+  3 - Model_Version: retriver_multirc_TL, Eval@0.95: 0.8837209302325582
+  4 - Model_Version: dual_retriver_multirc_base, Eval@0.95: 0.8372093023255814
+  5 - Model_Version: dual_retriver_multirc_PO, Eval@0.95: 0.7209302325581395
+  6 - Model_Version: retriver_multirc_PO, Eval@0.95: 0.6046511627906976
+
+Overall Cumulative Ranking
+  1 - Model_Version: retriver_multirc_TL, Total Rank: 9
+  2 - Model_Version: dual_retriver_multirc_TL, Total Rank: 13
+  3 - Model_Version: retriver_multirc_base, Total Rank: 15
+  4 - Model_Version: dual_retriver_multirc_base, Total Rank: 23
+  5 - Model_Version: dual_retriver_multirc_PO, Total Rank: 31
+  6 - Model_Version: retriver_multirc_PO, Total Rank: 35
+

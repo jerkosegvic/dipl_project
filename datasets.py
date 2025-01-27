@@ -322,7 +322,8 @@ class RAG_MultiRC_dataset(MultiRC_dataset):
         tokenizer_llm: AutoTokenizer,
         tokenizer_retrive: AutoTokenizer,
         max_length: int = 1024,
-        max_length_enc: int = 512
+        max_length_enc: int = 512,
+        positive_only: bool = False
     ) -> None:
         super(RAG_MultiRC_dataset, self).__init__(
             passages=passages, 
@@ -344,8 +345,13 @@ class RAG_MultiRC_dataset(MultiRC_dataset):
                 p_enc_ret = tokenizer_retrive(p, return_tensors='pt', add_special_tokens=True, padding="max_length", max_length=self.max_length_enc)
                 p_enc_gen = tokenizer_llm(p, return_tensors='pt', add_special_tokens=False)['input_ids']
                 cor = True if i in q.sentences_used else False
-                self.docs_enc_all.append((cor, j, p_enc_ret, p_enc_gen))
+                
                 obj.append((cor, p_enc_ret, p_enc_gen))
+
+                if positive_only and not cor:
+                    continue
+                
+                self.docs_enc_all.append((cor, j, p_enc_ret, p_enc_gen))
 
             self.docs_enc.append(obj)
 
@@ -394,7 +400,8 @@ class RAG_MultiRC_dataset_TL(RAG_MultiRC_dataset):
         tokenizer_llm: AutoTokenizer,
         tokenizer_retrive: AutoTokenizer,
         max_length: int = 1024,
-        max_length_enc: int = 512
+        max_length_enc: int = 512,
+        positive_only: bool = False # Just to be compatible with the parent class
     ) -> None:
         super(RAG_MultiRC_dataset_TL, self).__init__(
             passages=passages, 

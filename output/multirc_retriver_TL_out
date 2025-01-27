@@ -1,0 +1,229 @@
+Model initialized
+Train dataset loaded, with length 13574
+Validation dataset loaded, with length 1310
+Scheduler initialized
+Optimizer initialized
+Starting training
+Evaluating zero-shot performance...
+    Evaluating on 328 batches...
+    Zero-shot performance loss on eval: 1.3364078020904122
+    Zero-shot performance eval: 0.5641025641025641
+    Zero-shot performance on train: 0.543859649122807
+Training on 3394 batches
+[EVAL] Timestamp: 26.01.2025 17:14:38, Epoch: 1 / 5
+    Evaluating on 328 batches...
+    Batch: 0 / 3394, Batch Loss: 1.6380009651184082, Eval loss: 1.3473440583159284
+[LOG] Timestamp: 26.01.2025 17:16:12, Epoch: 1 / 5
+    Batch: 200 / 3394, Batch Loss: 0.9002847671508789
+[LOG] Timestamp: 26.01.2025 17:17:14, Epoch: 1 / 5
+    Batch: 400 / 3394, Batch Loss: 0.45001888275146484
+[LOG] Timestamp: 26.01.2025 17:18:17, Epoch: 1 / 5
+    Batch: 600 / 3394, Batch Loss: 0.01174306869506836
+[LOG] Timestamp: 26.01.2025 17:19:19, Epoch: 1 / 5
+    Batch: 800 / 3394, Batch Loss: 0.8969390392303467
+[EVAL] Timestamp: 26.01.2025 17:20:21, Epoch: 1 / 5
+    Evaluating on 328 batches...
+    Batch: 1000 / 3394, Batch Loss: 0.0, Eval loss: 0.6497612624633603
+[LOG] Timestamp: 26.01.2025 17:21:55, Epoch: 1 / 5
+    Batch: 1200 / 3394, Batch Loss: 0.06452226638793945
+[LOG] Timestamp: 26.01.2025 17:22:57, Epoch: 1 / 5
+    Batch: 1400 / 3394, Batch Loss: 0.0729837417602539
+[LOG] Timestamp: 26.01.2025 17:24:00, Epoch: 1 / 5
+    Batch: 1600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:25:02, Epoch: 1 / 5
+    Batch: 1800 / 3394, Batch Loss: 0.07299184799194336
+[EVAL] Timestamp: 26.01.2025 17:26:04, Epoch: 1 / 5
+    Evaluating on 328 batches...
+    Batch: 2000 / 3394, Batch Loss: 0.0, Eval loss: 0.6453745968458129
+[LOG] Timestamp: 26.01.2025 17:27:38, Epoch: 1 / 5
+    Batch: 2200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:28:40, Epoch: 1 / 5
+    Batch: 2400 / 3394, Batch Loss: 0.3767509460449219
+[LOG] Timestamp: 26.01.2025 17:29:43, Epoch: 1 / 5
+    Batch: 2600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:30:45, Epoch: 1 / 5
+    Batch: 2800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 17:31:47, Epoch: 1 / 5
+    Evaluating on 328 batches...
+    Batch: 3000 / 3394, Batch Loss: 0.0, Eval loss: 0.6190830687197243
+[LOG] Timestamp: 26.01.2025 17:33:21, Epoch: 1 / 5
+    Batch: 3200 / 3394, Batch Loss: 0.06204938888549805
+[SAVE] Timestamp: 26.01.2025 17:34:21, Epoch: 1 / 5
+[EPOCH EVAL] Timestamp: 26.01.2025 17:34:22 Epoch: 1 / 5
+    Evaluating on 328 batches...
+    Eval results: 0.8717948717948718, Eval loss: 0.6466002129926914
+    Eval results on train dataset: 0.9912280701754386
+[EVAL] Timestamp: 26.01.2025 17:36:11, Epoch: 2 / 5
+    Evaluating on 328 batches...
+    Batch: 0 / 3394, Batch Loss: 0.0, Eval loss: 0.6469043645916915
+[LOG] Timestamp: 26.01.2025 17:37:45, Epoch: 2 / 5
+    Batch: 200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:38:48, Epoch: 2 / 5
+    Batch: 400 / 3394, Batch Loss: 0.4909639358520508
+[LOG] Timestamp: 26.01.2025 17:39:50, Epoch: 2 / 5
+    Batch: 600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:40:52, Epoch: 2 / 5
+    Batch: 800 / 3394, Batch Loss: 0.3456425666809082
+[EVAL] Timestamp: 26.01.2025 17:41:54, Epoch: 2 / 5
+    Evaluating on 328 batches...
+    Batch: 1000 / 3394, Batch Loss: 0.0, Eval loss: 0.6052199391330161
+[LOG] Timestamp: 26.01.2025 17:43:28, Epoch: 2 / 5
+    Batch: 1200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:44:30, Epoch: 2 / 5
+    Batch: 1400 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:45:33, Epoch: 2 / 5
+    Batch: 1600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:46:35, Epoch: 2 / 5
+    Batch: 1800 / 3394, Batch Loss: 0.6115646362304688
+[EVAL] Timestamp: 26.01.2025 17:47:37, Epoch: 2 / 5
+    Evaluating on 328 batches...
+    Batch: 2000 / 3394, Batch Loss: 0.291471004486084, Eval loss: 0.6309913527674791
+[LOG] Timestamp: 26.01.2025 17:49:11, Epoch: 2 / 5
+    Batch: 2200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:50:13, Epoch: 2 / 5
+    Batch: 2400 / 3394, Batch Loss: 0.6095659732818604
+[LOG] Timestamp: 26.01.2025 17:51:15, Epoch: 2 / 5
+    Batch: 2600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 17:52:18, Epoch: 2 / 5
+    Batch: 2800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 17:53:20, Epoch: 2 / 5
+    Evaluating on 328 batches...
+    Batch: 3000 / 3394, Batch Loss: 0.0, Eval loss: 0.6637869738950962
+[LOG] Timestamp: 26.01.2025 17:54:54, Epoch: 2 / 5
+    Batch: 3200 / 3394, Batch Loss: 0.0
+[SAVE] Timestamp: 26.01.2025 17:55:54, Epoch: 2 / 5
+[EPOCH EVAL] Timestamp: 26.01.2025 17:55:54 Epoch: 2 / 5
+    Evaluating on 328 batches...
+    Eval results: 0.8974358974358975, Eval loss: 0.635602932150771
+    Eval results on train dataset: 0.9912280701754386
+[EVAL] Timestamp: 26.01.2025 17:57:44, Epoch: 3 / 5
+    Evaluating on 328 batches...
+    Batch: 0 / 3394, Batch Loss: 0.0, Eval loss: 0.6359233027551232
+[LOG] Timestamp: 26.01.2025 17:59:18, Epoch: 3 / 5
+    Batch: 200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:00:20, Epoch: 3 / 5
+    Batch: 400 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:01:22, Epoch: 3 / 5
+    Batch: 600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:02:25, Epoch: 3 / 5
+    Batch: 800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 18:03:27, Epoch: 3 / 5
+    Evaluating on 328 batches...
+    Batch: 1000 / 3394, Batch Loss: 0.0, Eval loss: 0.629012916873141
+[LOG] Timestamp: 26.01.2025 18:05:01, Epoch: 3 / 5
+    Batch: 1200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:06:03, Epoch: 3 / 5
+    Batch: 1400 / 3394, Batch Loss: 0.12050724029541016
+[LOG] Timestamp: 26.01.2025 18:07:05, Epoch: 3 / 5
+    Batch: 1600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:08:07, Epoch: 3 / 5
+    Batch: 1800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 18:09:09, Epoch: 3 / 5
+    Evaluating on 328 batches...
+    Batch: 2000 / 3394, Batch Loss: 0.0, Eval loss: 0.6363370411279725
+[LOG] Timestamp: 26.01.2025 18:10:44, Epoch: 3 / 5
+    Batch: 2200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:11:46, Epoch: 3 / 5
+    Batch: 2400 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:12:48, Epoch: 3 / 5
+    Batch: 2600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:13:50, Epoch: 3 / 5
+    Batch: 2800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 18:14:52, Epoch: 3 / 5
+    Evaluating on 328 batches...
+    Batch: 3000 / 3394, Batch Loss: 0.0, Eval loss: 0.6230822925160571
+[LOG] Timestamp: 26.01.2025 18:16:26, Epoch: 3 / 5
+    Batch: 3200 / 3394, Batch Loss: 0.0
+[SAVE] Timestamp: 26.01.2025 18:17:26, Epoch: 3 / 5
+[EPOCH EVAL] Timestamp: 26.01.2025 18:17:27 Epoch: 3 / 5
+    Evaluating on 328 batches...
+    Eval results: 0.8974358974358975, Eval loss: 0.6533534032542531
+    Eval results on train dataset: 0.9912280701754386
+[EVAL] Timestamp: 26.01.2025 18:19:16, Epoch: 4 / 5
+    Evaluating on 328 batches...
+    Batch: 0 / 3394, Batch Loss: 0.0, Eval loss: 0.653436294416102
+[LOG] Timestamp: 26.01.2025 18:20:50, Epoch: 4 / 5
+    Batch: 200 / 3394, Batch Loss: 0.16955041885375977
+[LOG] Timestamp: 26.01.2025 18:21:53, Epoch: 4 / 5
+    Batch: 400 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:22:55, Epoch: 4 / 5
+    Batch: 600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:23:57, Epoch: 4 / 5
+    Batch: 800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 18:24:59, Epoch: 4 / 5
+    Evaluating on 328 batches...
+    Batch: 1000 / 3394, Batch Loss: 0.0, Eval loss: 0.6580241504238873
+[LOG] Timestamp: 26.01.2025 18:26:33, Epoch: 4 / 5
+    Batch: 1200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:27:35, Epoch: 4 / 5
+    Batch: 1400 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:28:37, Epoch: 4 / 5
+    Batch: 1600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:29:40, Epoch: 4 / 5
+    Batch: 1800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 18:30:42, Epoch: 4 / 5
+    Evaluating on 328 batches...
+    Batch: 2000 / 3394, Batch Loss: 0.0, Eval loss: 0.6791131249288234
+[LOG] Timestamp: 26.01.2025 18:32:16, Epoch: 4 / 5
+    Batch: 2200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:33:18, Epoch: 4 / 5
+    Batch: 2400 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:34:20, Epoch: 4 / 5
+    Batch: 2600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:35:22, Epoch: 4 / 5
+    Batch: 2800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 18:36:24, Epoch: 4 / 5
+    Evaluating on 328 batches...
+    Batch: 3000 / 3394, Batch Loss: 0.0, Eval loss: 0.7221830814349942
+[LOG] Timestamp: 26.01.2025 18:37:58, Epoch: 4 / 5
+    Batch: 3200 / 3394, Batch Loss: 0.0
+[SAVE] Timestamp: 26.01.2025 18:38:58, Epoch: 4 / 5
+[EPOCH EVAL] Timestamp: 26.01.2025 18:38:59 Epoch: 4 / 5
+    Evaluating on 328 batches...
+    Eval results: 0.8461538461538461, Eval loss: 0.7093568458789732
+    Eval results on train dataset: 0.9912280701754386
+[EVAL] Timestamp: 26.01.2025 18:40:49, Epoch: 5 / 5
+    Evaluating on 328 batches...
+    Batch: 0 / 3394, Batch Loss: 0.0, Eval loss: 0.709354982870381
+[LOG] Timestamp: 26.01.2025 18:42:23, Epoch: 5 / 5
+    Batch: 200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:43:25, Epoch: 5 / 5
+    Batch: 400 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:44:27, Epoch: 5 / 5
+    Batch: 600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:45:29, Epoch: 5 / 5
+    Batch: 800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 18:46:31, Epoch: 5 / 5
+    Evaluating on 328 batches...
+    Batch: 1000 / 3394, Batch Loss: 0.0, Eval loss: 0.7157691629921518
+[LOG] Timestamp: 26.01.2025 18:48:05, Epoch: 5 / 5
+    Batch: 1200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:49:07, Epoch: 5 / 5
+    Batch: 1400 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:50:10, Epoch: 5 / 5
+    Batch: 1600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:51:12, Epoch: 5 / 5
+    Batch: 1800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 18:52:14, Epoch: 5 / 5
+    Evaluating on 328 batches...
+    Batch: 2000 / 3394, Batch Loss: 0.0, Eval loss: 0.6979410146794668
+[LOG] Timestamp: 26.01.2025 18:53:48, Epoch: 5 / 5
+    Batch: 2200 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:54:50, Epoch: 5 / 5
+    Batch: 2400 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:55:52, Epoch: 5 / 5
+    Batch: 2600 / 3394, Batch Loss: 0.0
+[LOG] Timestamp: 26.01.2025 18:56:54, Epoch: 5 / 5
+    Batch: 2800 / 3394, Batch Loss: 0.0
+[EVAL] Timestamp: 26.01.2025 18:57:56, Epoch: 5 / 5
+    Evaluating on 328 batches...
+    Batch: 3000 / 3394, Batch Loss: 0.0, Eval loss: 0.7043279910959849
+[LOG] Timestamp: 26.01.2025 18:59:30, Epoch: 5 / 5
+    Batch: 3200 / 3394, Batch Loss: 0.0
+[SAVE] Timestamp: 26.01.2025 19:00:30, Epoch: 5 / 5
+[EPOCH EVAL] Timestamp: 26.01.2025 19:00:31 Epoch: 5 / 5
+    Evaluating on 328 batches...
+    Eval results: 0.8461538461538461, Eval loss: 0.6956845049451037
+    Eval results on train dataset: 0.9912280701754386
+Training complete
+Model saved

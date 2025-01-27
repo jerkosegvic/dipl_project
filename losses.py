@@ -10,12 +10,12 @@ def train_func_retriver_multiRC(
     '''
     Train function for MultiRC dataset
     '''
-    is_correct, question, answer = input
+    is_correct, answer, question = input
     question = {k: v.to(device) for k,v in question.items()}
     answer = {k: v.to(device) for k,v in answer.items()}
     
-    q_enc = model.forward(question)
-    a_enc = model.forward(answer)
+    q_enc = model.forward(question, question=True)
+    a_enc = model.forward(answer, question=False)
     
     loss = torch.nn.functional.cosine_embedding_loss(q_enc, a_enc, torch.tensor([1.0 if i else -1.0 for i in is_correct]).to(device))
     #print(f'    Loss: {loss}, target: {is_correct}')
@@ -36,9 +36,9 @@ def triplet_loss_func_multiRC(
     positive = {k: v.to(device) for k,v in positive.items()}
     negative = {k: v.to(device) for k,v in negative.items()}
 
-    a_enc = model.forward(anchor)
-    p_enc = model.forward(positive) 
-    n_enc = model.forward(negative)
+    a_enc = model.forward(anchor, question=True)
+    p_enc = model.forward(positive, question=False)
+    n_enc = model.forward(negative, question=False)
 
     loss = torch.nn.functional.triplet_margin_loss(a_enc, p_enc, n_enc, margin=margin, p=p_norm)
     return loss.mean()

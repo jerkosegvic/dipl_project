@@ -92,7 +92,8 @@ def train_Retriver(
         log_interval: int = 100,
         scheduler: torch.optim.lr_scheduler = None,
         eval_func: Union[callable, None] = None,
-        train_eval_size: int = None
+        train_eval_size: int = None,
+        save_path: str = None
     ) -> None:
     '''
     Train a Retriver on a dataset using a train_func
@@ -132,8 +133,12 @@ def train_Retriver(
         if scheduler:
             scheduler.step()
 
+        if save_path:
+            print(f'[SAVE] Timestamp: {format_time(time.time())}, Epoch: {epoch + 1} / {epochs}')
+            torch.save(model, save_path+f'epoch_{epoch+1}.pth')
+
         if eval_func:
-            print(f'[EPOCH EVAL] Timestamp: {format_time(time.time())}) Epoch: {epoch + 1} / {epochs}')
+            print(f'[EPOCH EVAL] Timestamp: {format_time(time.time())} Epoch: {epoch + 1} / {epochs}')
             rs_1 = evaluate_retriver_loss(model, eval_dataset, train_func, device, batch_size)
             rs_2 = evaluate_retiver(model, eval_dataset, device, eval_func)
             print(f'    Eval results: {rs_2}, Eval loss: {rs_1}')

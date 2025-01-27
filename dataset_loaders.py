@@ -7,6 +7,7 @@ import re
 from typing import Type, TypeVar
 from transformers import AutoTokenizer
 import pickle
+from typing import Union, Tuple
 
 PROC_DATA_DIR = 'processed_data'
 
@@ -50,13 +51,22 @@ def load_multirc(
         save_name: str = None,
         Dataset_: Type[TMR] = MultiRC_dataset,
         max_length: int = 1024,
-        max_length_rag: int = 512
+        max_length_rag: int = 512,
+        ind_range: Union[Tuple[int, int], None] = None,
+        positive_only: bool = False
     ) -> TMR:
     if save_name is None:
+        name_appendix = ""
+        if ind_range is not None:
+            name_appendix = f"-{ind_range[0]}-{ind_range[1]}"
+
+        if positive_only:
+            name_appendix += "-pos_only"
+
         if Dataset_.class_name() == "multirc_base":
-            save_name = "multirc-" + path.split('/')[-1].split('.')[0] + '.pkl'
+            save_name = "multirc-" + path.split('/')[-1].split('.')[0] + name_appendix + '.pkl'
         else:
-            save_name = "multirc-" + Dataset_.class_name() + "-" + path.split('/')[-1].split('.')[0] + '.pkl'
+            save_name = "multirc-" + Dataset_.class_name() + "-" + path.split('/')[-1].split('.')[0] + name_appendix + '.pkl'
 
     save_path = os.path.join(PROC_DATA_DIR, save_name)
 
@@ -68,6 +78,9 @@ def load_multirc(
         raw_dataset = json.load(f)
 
     dataset = pd.DataFrame(raw_dataset['data'])
+    if ind_range is not None:
+        dataset = dataset.iloc[ind_range[0]:ind_range[1]]
+    
     paragraphs = []
     questions_list = []
     for (i, (paragraph, id)) in enumerate(zip(dataset['paragraph'], dataset['id'])):
@@ -84,7 +97,7 @@ def load_multirc(
         paragraphs.append(sentences)
     
     if tokenizer_rag is not None:
-        ds = Dataset_(paragraphs, questions_list, tokenizer, tokenizer_rag, max_length, max_length_rag)
+        ds = Dataset_(paragraphs, questions_list, tokenizer, tokenizer_rag, max_length, max_length_rag, positive_only)
     else:
         ds = Dataset_(paragraphs, questions_list, tokenizer, max_length)
     with open(save_path, 'wb') as f:

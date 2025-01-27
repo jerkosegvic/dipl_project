@@ -1,7 +1,10 @@
 from models import Model_LLM, Retriver
 from typing import List, Tuple, Union
 import torch
-from datasets import Boolq_dataset, MultiRC_dataset, ReCoRD_dataset, RACE_dataset, RAG_MultiRC_dataset
+from datasets import Boolq_dataset, MultiRC_dataset, ReCoRD_dataset, RACE_dataset, RAG_MultiRC_dataset, RAG_MultiRC_dataset_TL
+from typing import TypeVar
+from sklearn.metrics import roc_auc_score, auc, precision_recall_curve
+import numpy as np
 
 def auxilliary_calculate(
         results: List[Tuple[torch.Tensor, bool]], 
@@ -25,7 +28,7 @@ def auxilliary_calculate(
     
     if return_details:
         print(results)
-        return (TP + TN) / (TP + TN + FP + FN), TP / (TP + FP), TP / (TP + FN)
+        return TP, FP, TN, FN
     else:
         return ( (TP + TN) / (TP + TN + FP + FN) ) >= threshold_total
 
@@ -56,7 +59,8 @@ def evaluate_multirc_example_llm(
         threshold: Union[float, None] = None,
         threshold_total: float = 0.75,
         device: torch.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu'),
-        return_details: bool = False
+        return_details: bool = False,
+        metric_func: callable = auxilliary_calculate
     ) -> Tuple[float, float, float]:
     '''
     Evaluate a single MultiRC example, returns accuracy, precission and recall
@@ -77,7 +81,7 @@ def evaluate_multirc_example_llm(
 
     results = sorted(results, key=lambda x: x[0])
 
-    return auxilliary_calculate(results, return_details, threshold, threshold_total)
+    return metric_func(results, return_details, threshold, threshold_total)
     
     
 def evaluate_race_example_llm(
@@ -132,16 +136,15 @@ def evaluate_multirc_example_retriver(
     '''
     docs, question = example
     results = []
-    q_enc = model(question[0])
+    with torch.no_grad():
+        q_enc = model.forward(question[0], question=True)
     for (cor,doc,_) in docs:
         with torch.no_grad():
-            doc_enc = model(doc)
+            doc_enc = model.forward(doc, question=False)
             res = model.compare(doc_enc, q_enc)
         results.append((res, cor))
 
     return auxilliary_calculate(results, threshold=threshold, threshold_total=threshold_total, loss=False)
-
-
 
 
 def evaluate_task_llm(
@@ -213,3 +216,97 @@ def evaluate_retiver(
     
     model.train()
     return correct / total
+
+RET = TypeVar('RET', bound=Retriver)
+def auxilliary_calculate_results_multirc_retriver(
+    model: RET,
+    example: Tuple[List[Tuple[bool, dict, torch.Tensor]], Tuple[dict, torch.Tensor]],
+    device: torch.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+) -> List[Tuple[float, bool]]:
+    '''
+    Calculate the results for a single MultiRC example
+    '''
+    docs, question = example
+    results = []
+    with torch.no_grad():
+        q_enc = model.forward(question[0], question=True)
+    for (cor,doc,_) in docs:
+        with torch.no_grad():
+            doc_enc = model.forward(doc, question=False)
+            res = model.compare(doc_enc, q_enc)
+        results.append((res, cor))
+
+    results = sorted(results, key=lambda x: x[0], reverse=True)
+    return results
+        
+
+def p_at_k(
+    results: List[Tuple[float, bool]],
+    device: torch.device,
+    k: int = 5
+) -> float:
+    '''
+    Calculate the precision at k
+    '''
+    number_of_correct = sum([x[1] for x in results])
+    return sum([x[1] for x in results[:k]]) / min(k, number_of_correct)
+
+def ap_at_k(
+    results: List[Tuple[float, bool]],
+    device: torch.device,
+    k: int = 5
+) -> float:
+    '''
+    Calculate the average precision at k
+    '''
+    return sum([p_at_k(results, device, i+1) for i in range(k)]) / k
+
+
+def calculate_auroc_multirch_retriver_example(
+    results: List[Tuple[float, bool]],
+    device: torch.device,
+):
+    '''
+    Calculate the AUROC for a single MultiRC example
+    '''
+    return roc_auc_score([x[1] for x in results], [x[0].cpu() for x in results])
+
+def calculate_aupr_multirc_retriver_example(
+    results: List[Tuple[float, bool]],
+    device: torch.device,
+):
+    '''
+    Calculate the AUPR for a single MultiRC example
+    '''
+    y_true = [x[1] for x in results]
+    y_score = [x[0].cpu() for x in results]
+    precision, recall, _ = precision_recall_curve(y_true, y_score)
+    return auc(recall, precision)
+
+def calc_avg_metric_multirc_retriver(
+    model: RET,
+    dataset: Union[RAG_MultiRC_dataset, RAG_MultiRC_dataset_TL],
+    device: torch.device,
+    functions: List[callable],
+    evaluation_size: int = None
+) -> float:
+    '''
+    Calculate the average AUROC for a dataset
+    '''
+    res = []
+    if not evaluation_size:
+        evaluation_size = dataset.len_eval()
+
+    model.eval()
+    for ind in range(min(dataset.len_eval(), evaluation_size)):
+        example = dataset.get_item_eval(ind)
+        results = auxilliary_calculate_results_multirc_retriver(model, example)
+        rs = []
+        for function in functions:
+            rs.append(function(results, device))
+        res.append(rs)
+    
+    model.train()
+    res = np.array(res)
+    return list(np.mean(res, axis=0))
+        
