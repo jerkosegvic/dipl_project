@@ -8,6 +8,8 @@
 
 ### Usage
 - install requierments witw `pip install -r requierments.txt`
+- to download the data you can either use `download_data.py` script (you need to have an access token) or you can do it directly from the link above (zip file)
+- before using `download_data.py` script you need to configure paths and variables in it
 - `train_multirc_retriver.py` is a script for training retriver with shared encoder 
 - `train_multirc_dual_retriver.py` is a script for training retriver with two encoders, one for questions and one for sentences
 - before running any of those, make sure to set paths and hyperpaameters correctly
